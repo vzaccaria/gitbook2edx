@@ -1,0 +1,19 @@
+<course 
+	url_name="{{course.year}}-{{course.season}}" 
+	org="{{organization.name}}" 
+	course="{{course.name}}"
+	display_name="{{course.displayName}}">
+	{% for chapter in chapters %}
+		<chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
+		{% for subsection in chapter %}
+				<sequential display_name="{{subsection.displayName}}" url_name="{{subsection.urlName}}" >
+					<vertical display_name="{{subsection.displayName}}" url_name="{{subsection.urlName}}">
+						<html url_name="{{subsection.urlName}}">
+							{{ subsection.html }}
+						</html>
+					</vertical>
+				</sequential>
+		{% endfor %}			
+		</chapter>
+	{% endfor %}
+</course>

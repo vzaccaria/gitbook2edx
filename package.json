@@ -1,0 +1,22 @@
+{
+  "name": "gitbook2edx",
+  "version": "0.0.1",
+  "description": "Convert a gitbook into an edx course",
+  "bin": {
+    "gitbook2edx": "./bin/gitbook2edx"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vittorio Zaccaria",
+  "license": "BSD",
+  "dependencies": {
+    "docopt": "~0.4.1",
+    "glob": "~4.3.1",
+    "bluebird": "~2.3.11",
+    "lodash": "~2.4.1",
+    "liquid-node": "~2.4.0",
+    "js-yaml": "~3.2.3"
+  }
+}
