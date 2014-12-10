@@ -7,22 +7,9 @@ require! 'fs'
 {condense} = require('./condense')
 {write}    = require('./write')
 {gitbook} = require('./gitbook')
+shelljs = require('shelljs')
 
-doc = """
-Usage:
-    gitbook2edx json DIR [ -c CONFIG ]
-    gitbook2edx build DIR [ -c CONFIG ]
-    gitbook2edx gen DIR [ -c CONFIG ]
-    gitbook2edx -h | --help 
-
-Options:
-    -h, --help              Just this help
-    -c, --config CONFIG     file name of the YAML configuration of the course
-
-Arguments:
-    DIR             directory to condense into a json file
-
-"""
+doc = shelljs.cat(__dirname+"/../docs/usage.md")
 
 get-option = (a, b, def, o) ->
     if not o[a] and not o[b]

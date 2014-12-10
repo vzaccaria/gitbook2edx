@@ -4,8 +4,11 @@
 
 {%= include("install-global") %}
 
-## API
-{%= comments("index.js") %}
+## General help 
+
+```
+{%= partial("usage.md") %}
+```
 
 ## Author
 {%= include("author") %}
