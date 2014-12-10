@@ -1,8 +1,54 @@
 ---
 course: 
     name: 'Informatica B'
+    number: '80169'
     year: '2014'
-    season: 'fall'
+    season: 'spring'
+
+    start: 'March 1, 2015 8:00'
+    end: 'June 3, 2015'
+
+    enrollment_start: 'Feb 1, 2015'
+    enrollment_end: 'Feb 1, 2015'
+
+    # in '_assets' directory
+    image: 'course-image.jpg'
 
 organization: 
-    name: 'Politecnico di Milano'
+    name: 'Politecnico di Milano - Sede di Bovisa'
+
+# assets-url:
+#     js: '//localhost:4000/js/client.js'
+#     css: '//localhost:4000/css/client.css'
+
+assets:
+    # in '_assets' directory
+    js: 'client.js'
+    css: 'client.css'
+
+info:
+    about: |
+      # This is a course
+      dkldklffd
+
+    prerequisites: |
+      # These are the prerequisites
+
+    course-staff: 
+
+      - name: 'Vittorio Zaccaria' 
+        image: 'http://www.vittoriozaccaria.net/v2/img/profile_pic_1_res.jpg'
+        bio: 'xlkxz xz lxzlk'
+
+      - name: 'Vittorio2 Zaccaria' 
+        image: 'http://www.vittoriozaccaria.net/v2/img/profile_pic_1_res.jpg'
+        bio: 'xlkxz xz lxzlk'
+
+    faq: 
+      - question: 'q1'
+        answer: 'aq2'
+
+short-description: |
+    # Informatica B 
+    
+    Questo e` Il corso di informatica B!

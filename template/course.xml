@@ -1,19 +1,46 @@
 <course 
-	url_name="{{course.year}}-{{course.season}}" 
-	org="{{organization.name}}" 
-	course="{{course.name}}"
-	display_name="{{course.displayName}}">
-	{% for chapter in chapters %}
-		<chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
-		{% for subsection in chapter %}
-				<sequential display_name="{{subsection.displayName}}" url_name="{{subsection.urlName}}" >
-					<vertical display_name="{{subsection.displayName}}" url_name="{{subsection.urlName}}">
-						<html url_name="{{subsection.urlName}}">
-							{{ subsection.html }}
-						</html>
-					</vertical>
-				</sequential>
-		{% endfor %}			
-		</chapter>
-	{% endfor %}
+ url_name="{{course.year}}-{{course.season}}" 
+ org="{{organization.name}}" 
+ course="{{course.name}}"
+ display_name="{{course.displayName}}"
+ start="{{course.start | datejs }}"
+ end="{{course.end| datejs }}"
+ enrollment_start="{{course.enrollment_start | datejs}}"
+ enrollment_end="{{course.enrollment_end | datejs}}"
+ course_image="{{course.image}}"
+ >
+ {% for chapter in chapters %}
+  <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
+  {% for section in chapter %}
+    <sequential display_name="{{section.displayName}}" url_name="{{section.urlName}}" >
+     {% for subsection in section.content %}
+      {% if subsection.type == 'normal' %}
+       <vertical display_name="{{section.displayName}} - Step {{forloop.index}}" url_name="{{section.urlName}}-{{forloop.index}}">
+        <html display_name="{{section.displayName}} - Step {{forloop.index}}">
+
+         {% if assets.css %}
+          <link rel="stylesheet" type="text/css" href='/static/{{assets.css}}' />
+         {% endif %}
+
+         {% if assets-url.css %}
+          <link rel="stylesheet" type="text/css" href='{{assets-url.css}}' />
+         {% endif %}
+
+         {% if assets.js %}
+          <script type='text/javascript' src='/static/{{assets.js}}' />
+         {% endif %}
+
+         {% if assets-url.js %}
+          <script type='text/javascript' src='{{assets-url.js}}' />
+         {% endif %}
+         
+         {{subsection.content}}
+        </html> 
+      </vertical>
+      {% endif %}
+     {% endfor %}
+    </sequential>
+  {% endfor %}      
+  </chapter>
+ {% endfor %}
 </course>

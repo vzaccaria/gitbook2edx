@@ -1,0 +1,1 @@
+../../../../edx-assets/_site/js/client.js

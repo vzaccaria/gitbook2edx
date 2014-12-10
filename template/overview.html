@@ -1,0 +1,33 @@
+<section class="about">
+{{info.about | markdown }}
+</section>
+
+<section class="prerequisites">
+{{info.prerequsites | markdown }}
+</section>
+
+<section class="course-staff">
+  <h2>Course Staff</h2>
+{% for staff in info.course-staff %}
+  <article class="teacher">
+    <div class="teacher-image">
+      <img src="{{staff.image}}" align="left" style="margin:0 20 px 0">
+    </div>
+
+    <h3>{{staff.name}}</h3>
+    {{staff.bio | markdown }}
+  </article>
+  {% endfor %}
+</section>
+
+<section class="faq">
+  <section class="responses">
+    <h2>Frequently Asked Questions</h2>
+    {% for q in info.faq %}
+    <article class="response">
+      <h3>{{q.question}}</h3>
+      {{q.answer | markdown }}
+    </article>
+    {% endfor %}
+  </section>
+</section>

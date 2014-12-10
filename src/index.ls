@@ -3,13 +3,16 @@
 _ = require('lodash')
 require! 'fs'
 
-{build} = require('./build')
+{build}    = require('./build')
 {condense} = require('./condense')
+{write}    = require('./write')
+{gitbook} = require('./gitbook')
 
 doc = """
 Usage:
-    gitbook2edx json DIR -c CONFIG
-    gitbook2edx build DIR -c CONFIG 
+    gitbook2edx json DIR [ -c CONFIG ]
+    gitbook2edx build DIR [ -c CONFIG ]
+    gitbook2edx gen DIR [ -c CONFIG ]
     gitbook2edx -h | --help 
 
 Options:
@@ -29,17 +32,33 @@ get-option = (a, b, def, o) ->
 
 o = docopt(doc)
 
-yaml-config = get-option('-c', '--config', 'invalid', o)
+source-dir = o['DIR']
+book-dir = "#{source-dir}/_book"
+
+yaml-config = get-option('-c', '--config', "#{source-dir}/config.yaml", o)
 
 
 if o['json']
-    condense(o['DIR'], yaml-config).then ->
+    gitbook(source-dir)
+    .then ->
+        condense(book-dir, source-dir, yaml-config)
+    .then ->
         console.log JSON.stringify(it, 0, 4)
 
 if o['build'] 
-    condense(o['DIR'], yaml-config).then ->
-        build(it)
+    gitbook(source-dir)
+    .then ->
+        condense(book-dir, source-dir, yaml-config)
+    .then build
+    .then ->
+        console.log it
 
+if o['gen'] 
+    gitbook(source-dir)
+    .then ->
+        condense(book-dir, source-dir, yaml-config)
+    .then build
+    .then write
 
 
 

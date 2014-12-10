@@ -2,6 +2,7 @@ glob     = require('glob')
 fs       = require('fs')
 bluebird = require('bluebird')
 _        = require('lodash')
+debug = require('debug')(__filename)
 
 bluebird.promisifyAll(fs)
 
@@ -11,17 +12,19 @@ $ = require('underscore.string')
 
 _module = ->
 
-    condense = (directory, config) ->
+    condense = (directory, source-dir, config) ->
         metadata = y.safeLoad(fs.readFileSync(config, 'utf-8'))
 
+        metadata.course.orig-dir = source-dir
         metadata.course.displayName = metadata.course.name
-        metadata.course.name = $.slugify( metadata.course.displayName )
+        metadata.course.name = $.slugify( metadata.course.number )
 
         metadata.organization.displayName = metadata.organization.name
         metadata.organization.name = $.slugify(metadata.organization.name)
 
         files = glob.sync("#directory/**/*.json")
         promised_files = [ fs.readFileAsync(f, 'utf-8') for f in files ]
+
         bluebird.all(promised_files).map ->
             data = JSON.parse(it)
             level = data.progress.current.level
@@ -50,6 +53,8 @@ _module = ->
                 it.displayName = it[0].displayName
                 it.urlName = it[0].urlName
                 return it
+
+            debug("All data gathered into a single structure")
 
             return _.extend(metadata, { chapters: grouped })
 
