@@ -1,16 +1,14 @@
 <course 
  url_name="2014-spring" 
- org="politecnico-di-milano-sede-di-bovisa" 
+ org="polimix" 
  course="80169"
  display_name="Informatica B"
- start=""
- end=""
- 
- enrollment_start=""
- enrollment_end=""
 
  
- course_image="course-image.jpg"
+ 
+ 
+ 
+  course_image="course-image.jpg" 
  
  >
  

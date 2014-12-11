@@ -10,7 +10,7 @@ course:
     image: 'course-image.jpg'
 
 organization: 
-    name: 'Politecnico di Milano - Sede di Bovisa'
+    name: 'PolimiX'
 
 # assets-url:
 #     js: '//localhost:4000/js/client.js'
