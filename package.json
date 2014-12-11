@@ -1,7 +1,7 @@
 {
   "name": "gitbook2edx",
   "version": "0.0.1",
-  "description": "Convert a gitbook into an Edx course. It generates a .tar.gz ready to be imported in Edx Studio.",
+  "description": "Convert a Gitbook into an Edx course. It generates a file  ready to be imported in Edx Studio.",
   "bin": {
     "gitbook2edx": "./bin/gitbook2edx"
   },
@@ -22,6 +22,7 @@
     "debug": "~2.1.0",
     "marked": "~0.3.2",
     "date.js": "~0.2.0",
-    "moment": "~2.8.4"
+    "moment": "~2.8.4",
+    "underscore.string": "~2.4.0"
   }
 }

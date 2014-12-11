@@ -1,6 +1,6 @@
 # gitbook2edx [![NPM version](https://badge.fury.io/js/gitbook2edx.svg)](http://badge.fury.io/js/gitbook2edx)
 
-> Convert a gitbook into an Edx course. It generates a .tar.gz ready to be imported in Edx Studio.
+> Convert a Gitbook into an Edx course. It generates a file  ready to be imported in Edx Studio.
 
 ## Install globally with [npm](npmjs.org):
 
@@ -21,7 +21,7 @@ Options:
     -c, --config CONFIG     Filename of the YAML configuration of the course
 
 Arguments:
-    DIR                     Root directory of the Gitbook file 
+    DIR                     Root directory of the Gitbook to be converted
 
 Commands:
     gen                     Generate the `course.tar.gz` file for the gitbook in DIR.
@@ -51,7 +51,7 @@ To generate the course archive (`course.tar.gz`), the following information is n
 
 ### Example
 
-To generate `course.tar.gz` for a gitbook in `test/javascript-master` (assuming the configuration is `test/javascript-master/config.yaml`): 
+To generate `course.tar.gz` for a Gitbook in `test/javascript-master` (assuming the configuration is `test/javascript-master/config.yaml`): 
 
     gitbook2edx gen test/javascript-master
 

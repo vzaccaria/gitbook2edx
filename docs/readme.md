@@ -31,7 +31,7 @@ To generate the course archive (`course.tar.gz`), the following information is n
 
 ### Example
 
-To generate `course.tar.gz` for a gitbook in `test/javascript-master` (assuming the configuration is `test/javascript-master/config.yaml`): 
+To generate `course.tar.gz` for a Gitbook in `test/javascript-master` (assuming the configuration is `test/javascript-master/config.yaml`): 
 
     gitbook2edx gen test/javascript-master
 

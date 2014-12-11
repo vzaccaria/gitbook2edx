@@ -8,7 +8,7 @@ Options:
     -c, --config CONFIG     Filename of the YAML configuration of the course
 
 Arguments:
-    DIR                     Root directory of the Gitbook file 
+    DIR                     Root directory of the Gitbook to be converted
 
 Commands:
     gen                     Generate the `course.tar.gz` file for the gitbook in DIR.
