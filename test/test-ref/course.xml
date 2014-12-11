@@ -3,11 +3,11 @@
  org="politecnico-di-milano-sede-di-bovisa" 
  course="80169"
  display_name="Informatica B"
- start="2015-03-01T07:00:00.000Z"
- end="2015-06-02T22:00:00.000Z"
+ start=""
+ end=""
  
- enrollment_start="2015-01-31T23:00:00.000Z"
- enrollment_end="2015-01-31T23:00:00.000Z"
+ enrollment_start=""
+ enrollment_end=""
 
  
  course_image="course-image.jpg"

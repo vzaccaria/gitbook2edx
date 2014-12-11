@@ -3,10 +3,11 @@ set -e
 
 usage="
 Usage: 
-    test [ -d | --dry ]
+    test [ -d | --dry ] [ -n | --noclean ]
 
 Options:
     -d, --dry       Dont execute commands.
+    -n, --noclean   Dont clean up temporary dir
 
 Description:
     Launch gitbook2edx tests
@@ -84,6 +85,8 @@ run() {
   fi
 }
 
+clean=true
+
 
 while (($# > 0)) ; do
   option="$1"
@@ -95,6 +98,7 @@ while (($# > 0)) ; do
       exit
       ;;
     -d|--dry-run)      dry_run=true        ;;
+    -n|--noclean)      clean=false         ;;
     *)
       echo "Unrecognized option $option" >&2
       exit 1
@@ -109,4 +113,6 @@ run "cd $gbtdir && $srcdir/../bin/gitbook2edx gen source"
 run "diff-files $srcdir/../test/test-ref/course.xml  $gbtdir/_course/course.xml                                      -m 'Testing course.xml   '"
 run "diff-files $srcdir/../test/test-ref/about/overview.html  $gbtdir/_course/about/overview.html                    -m 'Testing overview.html'"
 run "diff-files $srcdir/../test/test-ref/about/short_description.html $gbtdir/_course/about/short_description.html   -m 'Testing short descr. '"
-run "rm -rf $gbtdir"
+if [[ $clean == true ]]; then
+    run "rm -rf $gbtdir"
+fi

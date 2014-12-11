@@ -5,11 +5,6 @@ course:
     year: '2014'
     season: 'spring'
 
-    start: 'March 1, 2015 8:00'
-    end: 'June 3, 2015'
-
-    enrollment_start: 'Feb 1, 2015'
-    enrollment_end: 'Feb 1, 2015'
 
     # in '_assets' directory
     image: 'course-image.jpg'
