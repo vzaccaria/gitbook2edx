@@ -23,6 +23,7 @@
     "marked": "~0.3.2",
     "date.js": "~0.2.0",
     "moment": "~2.8.4",
-    "underscore.string": "~2.4.0"
+    "underscore.string": "~2.4.0",
+    "gitbook": "~1.4.2"
   }
 }
