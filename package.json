@@ -1,7 +1,7 @@
 {
   "name": "gitbook2edx",
   "version": "0.0.1",
-  "description": "Convert a gitbook into an edx course",
+  "description": "Convert a gitbook into an Edx course. It generates a .tar.gz ready to be imported in Edx Studio.",
   "bin": {
     "gitbook2edx": "./bin/gitbook2edx"
   },

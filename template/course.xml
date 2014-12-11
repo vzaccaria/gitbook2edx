@@ -5,9 +5,13 @@
  display_name="{{course.displayName}}"
  start="{{course.start | datejs }}"
  end="{{course.end| datejs }}"
+ 
  enrollment_start="{{course.enrollment_start | datejs}}"
  enrollment_end="{{course.enrollment_end | datejs}}"
+
+ {% if course.image %}
  course_image="{{course.image}}"
+ {% endif %}
  >
  {% for chapter in chapters %}
   <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
