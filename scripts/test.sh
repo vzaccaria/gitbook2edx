@@ -1,4 +1,4 @@
-#!/usr/bin/env sh 
+#!/usr/bin/env bash 
 set -e
 
 usage="
@@ -79,6 +79,8 @@ dry_run=false
 run() {
   if [[ $dry_run == false ]] ; then
     eval "$1"
+  else
+    echo "$1"
   fi
 }
 
@@ -99,10 +101,12 @@ while (($# > 0)) ; do
   esac
 done
 
-run "rm -rf $dstdir/_course"
-run "$srcdir/../bin/gitbook2edx gen $srcdir/../test/javascript-master"
-run "diff-files $srcdir/../test/test-ref/course.xml $dstdir/_course/course.xml                                      -m 'Testing course.xml   '"
-run "diff-files $srcdir/../test/test-ref/about/overview.html $dstdir/_course/about/overview.html                    -m 'Testing overview.html'"
-run "diff-files $srcdir/../test/test-ref/about/short_description.html $dstdir/_course/about/short_description.html  -m 'Testing short descr. '"
-run "rm -rf $dstdir/_course"
-run "rm -rf $dstdir/course.tar.gz"
+gbtdir="$dstdir/tmp-gitbook-test"
+run "rm -rf $gbtdir"
+run "mkdir $gbtdir"
+run "cp -R $srcdir/../test/javascript-master $gbtdir/source"
+run "cd $gbtdir && $srcdir/../bin/gitbook2edx gen source"
+run "diff-files $srcdir/../test/test-ref/course.xml  $gbtdir/_course/course.xml                                      -m 'Testing course.xml   '"
+run "diff-files $srcdir/../test/test-ref/about/overview.html  $gbtdir/_course/about/overview.html                    -m 'Testing overview.html'"
+run "diff-files $srcdir/../test/test-ref/about/short_description.html $gbtdir/_course/about/short_description.html   -m 'Testing short descr. '"
+run "rm -rf $gbtdir"
