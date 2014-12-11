@@ -27,6 +27,8 @@ parse ->
     @collect "clean", -> [
         @remove-all-targets()
         @cmd "rm -rf ./bin"
+        @cmd "rm -rf _course"
+        @cmd "rm -rf course.tar.gz"
     ]
 
 
