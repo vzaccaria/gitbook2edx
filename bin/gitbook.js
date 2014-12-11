@@ -10,8 +10,10 @@
       debug("Removing " + directory + "/_book");
       shelljs.rm('-rf', directory + "/_book");
       return new bluebird(function(resolve, rej){
-        debug("gitbook build -f json " + directory);
-        return shelljs.exec("gitbook build -f json " + directory, {
+        var cmd;
+        cmd = __dirname + "/../node_modules/.bin/gitbook build -f json " + directory;
+        debug(cmd);
+        return shelljs.exec(cmd, {
           async: true,
           silent: true
         }, function(code, output){

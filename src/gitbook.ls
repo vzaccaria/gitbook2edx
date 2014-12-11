@@ -9,8 +9,9 @@ _module = ->
         debug "Removing #directory/_book"
         shelljs.rm('-rf', "#directory/_book")
         new bluebird (resolve, rej) ->
-            debug "gitbook build -f json #directory"
-            shelljs.exec "gitbook build -f json #directory", { +async, +silent }, (code, output) ->
+            cmd = "#{__dirname}/../node_modules/.bin/gitbook build -f json #directory"
+            debug cmd
+            shelljs.exec cmd, { +async, +silent }, (code, output) ->
                 if code 
                     debug("Error, #output")
                     rej('sorry, command failed')
