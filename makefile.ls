@@ -5,11 +5,20 @@
 
 
 parse ->
+
+    @add-plugin \bfy, (g, deps) ->
+        @compile-files( (-> "browserify -t cssify -t liveify #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
+
     @collect "build", -> [
             @toDir 'bin', { strip: 'src' }, -> [
                 @livescript './src/*.ls'
                 ]
             ]
+
+    @collect "build-assets", -> 
+        @dest ("./static/client.js"),  ->
+                @minifyjs ->
+                       @bfy "./assets/client.ls", "./assets/**/*.{ls,js,css}"
 
     @collect "exec", -> 
         @command-seq -> [
@@ -22,6 +31,8 @@ parse ->
         @command-seq -> [
                 @make "build"
                 @make "exec"
+                @make "build-assets"
+                @cmd "./test/test.sh -n"
                 ]
 
     @collect "clean", -> [

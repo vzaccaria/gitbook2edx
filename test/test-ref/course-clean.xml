@@ -1,5 +1,5 @@
 <course 
- url_name="2014-spring" 
+  
  org="testx" 
  course="8888"
  display_name="Javascript fundamentals"
@@ -13,13 +13,13 @@
  >
  
  
-  <chapter display_name="Introduction" url_name="introduction-5vetuxua-aefukfba">
+  <chapter display_name="Introduction" >
   
-    <sequential display_name="Introduction" url_name="introduction-5vetuxua" >
+    <sequential display_name="Introduction"  >
      
 
       
-      <vertical display_name="Introduction - Step 1" url_name="lxbqbovb">
+      <vertical display_name="Introduction - Step 1" >
         <html display_name="Introduction - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -41,13 +41,13 @@
         
   </chapter>
  
-  <chapter display_name="Basics" url_name="basics-fo7m4xj2-ayo5e1nj">
+  <chapter display_name="Basics" >
   
-    <sequential display_name="Basics" url_name="basics-fo7m4xj2" >
+    <sequential display_name="Basics"  >
      
 
       
-      <vertical display_name="Basics - Step 1" url_name="ewtwyfnm">
+      <vertical display_name="Basics - Step 1" >
         <html display_name="Basics - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -75,11 +75,11 @@
       
     </sequential>
   
-    <sequential display_name="Comments" url_name="comments-fhrq3ee2" >
+    <sequential display_name="Comments"  >
      
 
       
-      <vertical display_name="Comments - Step 1" url_name="jnvj4k8a">
+      <vertical display_name="Comments - Step 1" >
         <html display_name="Comments - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -115,7 +115,7 @@ it will be ignored by the interpreter
        
 
       
-      <vertical display_name="Comments - Step 2" url_name="6hgynrq9">
+      <vertical display_name="Comments - Step 2" >
         <problem display_name="Comments - Step 2">
             <text>
                 <p>Mi arracomando !!!!!</p>
@@ -142,11 +142,11 @@ it will be ignored by the interpreter
       
     </sequential>
   
-    <sequential display_name="Variables" url_name="variables-h5ujq5d6" >
+    <sequential display_name="Variables"  >
      
 
       
-      <vertical display_name="Variables - Step 1" url_name="j4jrdwco">
+      <vertical display_name="Variables - Step 1" >
         <html display_name="Variables - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -184,11 +184,11 @@ y = 5
       
     </sequential>
   
-    <sequential display_name="Types" url_name="types-2ibqs58d" >
+    <sequential display_name="Types"  >
      
 
       
-      <vertical display_name="Types - Step 1" url_name="i8ra4ncx">
+      <vertical display_name="Types - Step 1" >
         <html display_name="Types - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -230,7 +230,7 @@ y = 5
        
 
       
-      <vertical display_name="Types - Step 2" url_name="d1bo2491">
+      <vertical display_name="Types - Step 2" >
         <problem display_name="Types - Step 2">
             <text>
                 <p>Create a variable named <code>a</code> using the keyword <code>var</code>.</p>
@@ -259,11 +259,11 @@ y = 5
       
     </sequential>
   
-    <sequential display_name="Equality" url_name="equality-niwh5uts" >
+    <sequential display_name="Equality"  >
      
 
       
-      <vertical display_name="Equality - Step 1" url_name="iu1ew4c8">
+      <vertical display_name="Equality - Step 1" >
         <html display_name="Equality - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -292,13 +292,13 @@ y = 5
         
   </chapter>
  
-  <chapter display_name="Numbers" url_name="numbers-m8xdxqbq-9pc7uw8d">
+  <chapter display_name="Numbers" >
   
-    <sequential display_name="Numbers" url_name="numbers-m8xdxqbq" >
+    <sequential display_name="Numbers"  >
      
 
       
-      <vertical display_name="Numbers - Step 1" url_name="mxv5uysh">
+      <vertical display_name="Numbers - Step 1" >
         <html display_name="Numbers - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -317,11 +317,11 @@ y = 5
       
     </sequential>
   
-    <sequential display_name="Creation" url_name="creation-m4iesipi" >
+    <sequential display_name="Creation"  >
      
 
       
-      <vertical display_name="Creation - Step 1" url_name="rwfkgtlt">
+      <vertical display_name="Creation - Step 1" >
         <html display_name="Creation - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -350,7 +350,7 @@ var b = a;
        
 
       
-      <vertical display_name="Creation - Step 2" url_name="ca7tq0ef">
+      <vertical display_name="Creation - Step 2" >
         <problem display_name="Creation - Step 2">
             <text>
                 <p>Create a variable <code>x</code> which equals <code>10</code> and create a variable <code>y</code> which equals <code>a</code>.</p>
@@ -383,11 +383,11 @@ var y = a;", "validation": "assert(x === 10 &amp;&amp; y === a);", "context":   
       
     </sequential>
   
-    <sequential display_name="Basic Operators" url_name="basic-operators-wfj2r05q" >
+    <sequential display_name="Basic Operators"  >
      
 
       
-      <vertical display_name="Basic Operators - Step 1" url_name="fhr387hb">
+      <vertical display_name="Basic Operators - Step 1" >
         <html display_name="Basic Operators - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -414,7 +414,7 @@ var y = a;", "validation": "assert(x === 10 &amp;&amp; y === a);", "context":   
        
 
       
-      <vertical display_name="Basic Operators - Step 2" url_name="dg0jw773">
+      <vertical display_name="Basic Operators - Step 2" >
         <problem display_name="Basic Operators - Step 2">
             <text>
                 <p>Create a variable <code>x</code> equal to the sum of <code>a</code> and <code>b</code> divided by <code>c</code>and finally multiplied by <code>d</code>.</p>
@@ -461,11 +461,11 @@ var x = ((a + b) / c) * d;", "validation": "assert(x === (((a + b) / c) * d));",
       
     </sequential>
   
-    <sequential display_name="Advanced Operators" url_name="advanced-operators-btchu42a" >
+    <sequential display_name="Advanced Operators"  >
      
 
       
-      <vertical display_name="Advanced Operators - Step 1" url_name="su5kivuy">
+      <vertical display_name="Advanced Operators - Step 1" >
         <html display_name="Advanced Operators - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -498,7 +498,7 @@ var x = ((a + b) / c) * d;", "validation": "assert(x === (((a + b) / c) * d));",
        
 
       
-      <vertical display_name="Advanced Operators - Step 2" url_name="dqeuw45b">
+      <vertical display_name="Advanced Operators - Step 2" >
         <problem display_name="Advanced Operators - Step 2">
             <text>
                 <p>Define a variable <code>c</code> as the modulus of the decremented value of <code>x</code> by 3.</p>
@@ -535,13 +535,13 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
         
   </chapter>
  
-  <chapter display_name="Strings" url_name="strings-ap3spq1r-vwiobs6l">
+  <chapter display_name="Strings" >
   
-    <sequential display_name="Strings" url_name="strings-ap3spq1r" >
+    <sequential display_name="Strings"  >
      
 
       
-      <vertical display_name="Strings - Step 1" url_name="hgsgamtj">
+      <vertical display_name="Strings - Step 1" >
         <html display_name="Strings - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -563,11 +563,11 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
       
     </sequential>
   
-    <sequential display_name="Creation" url_name="creation-7qm7l72n" >
+    <sequential display_name="Creation"  >
      
 
       
-      <vertical display_name="Creation - Step 1" url_name="6j38j74l">
+      <vertical display_name="Creation - Step 1" >
         <html display_name="Creation - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -597,7 +597,7 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
        
 
       
-      <vertical display_name="Creation - Step 2" url_name="hsh4qyb9">
+      <vertical display_name="Creation - Step 2" >
         <problem display_name="Creation - Step 2">
             <text>
                 <p>Create a variable named <code>str</code> set to the value <code>&quot;abc&quot;</code>.</p>
@@ -626,11 +626,11 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
       
     </sequential>
   
-    <sequential display_name="Concatenation" url_name="concatenation-ul85i4nn" >
+    <sequential display_name="Concatenation"  >
      
 
       
-      <vertical display_name="Concatenation - Step 1" url_name="7wo5bnt2">
+      <vertical display_name="Concatenation - Step 1" >
         <html display_name="Concatenation - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -652,7 +652,7 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
        
 
       
-      <vertical display_name="Concatenation - Step 2" url_name="8vb37o7p">
+      <vertical display_name="Concatenation - Step 2" >
         <problem display_name="Concatenation - Step 2">
             <text>
                 <p>Add up the different names so that the <code>fullName</code> variable contains John&#39;s complete name.</p>
@@ -691,11 +691,11 @@ var fullName = firstName + &quot; &quot; + lastName;", "validation": "assert(ful
       
     </sequential>
   
-    <sequential display_name="Length" url_name="length-fe17t93x" >
+    <sequential display_name="Length"  >
      
 
       
-      <vertical display_name="Length - Step 1" url_name="0cekq5m0">
+      <vertical display_name="Length - Step 1" >
         <html display_name="Length - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -719,7 +719,7 @@ var fullName = firstName + &quot; &quot; + lastName;", "validation": "assert(ful
        
 
       
-      <vertical display_name="Length - Step 2" url_name="712l5rxv">
+      <vertical display_name="Length - Step 2" >
         <problem display_name="Length - Step 2">
             <text>
                 <p>Store in the variable named <code>size</code> the length of <code>str</code>.</p>
@@ -756,13 +756,13 @@ var size = str.length;", "validation": "assert(size === str.length);", "context"
         
   </chapter>
  
-  <chapter display_name="Conditional Logic" url_name="conditional-logic-jgcwapuu-teddfsoh">
+  <chapter display_name="Conditional Logic" >
   
-    <sequential display_name="Conditional Logic" url_name="conditional-logic-jgcwapuu" >
+    <sequential display_name="Conditional Logic"  >
      
 
       
-      <vertical display_name="Conditional Logic - Step 1" url_name="6xpap9o2">
+      <vertical display_name="Conditional Logic - Step 1" >
         <html display_name="Conditional Logic - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -783,11 +783,11 @@ var size = str.length;", "validation": "assert(size === str.length);", "context"
       
     </sequential>
   
-    <sequential display_name="If" url_name="if-vgysnvut" >
+    <sequential display_name="If"  >
      
 
       
-      <vertical display_name="If - Step 1" url_name="1f3et81b">
+      <vertical display_name="If - Step 1" >
         <html display_name="If - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -835,7 +835,7 @@ var size = str.length;", "validation": "assert(size === str.length);", "context"
        
 
       
-      <vertical display_name="If - Step 2" url_name="hehwupd3">
+      <vertical display_name="If - Step 2" >
         <problem display_name="If - Step 2">
             <text>
                 <p>Fill up the value of <code>name</code> to validate the condition.</p>
@@ -878,11 +878,11 @@ if (name === &quot;John&quot;) {
       
     </sequential>
   
-    <sequential display_name="Else" url_name="else-vbqwgvv5" >
+    <sequential display_name="Else"  >
      
 
       
-      <vertical display_name="Else - Step 1" url_name="qnyoqa8p">
+      <vertical display_name="Else - Step 1" >
         <html display_name="Else - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -919,7 +919,7 @@ if (name === &quot;John&quot;) {
        
 
       
-      <vertical display_name="Else - Step 2" url_name="6fm4ydfd">
+      <vertical display_name="Else - Step 2" >
         <problem display_name="Else - Step 2">
             <text>
                 <p>Fill up the value of <code>name</code> to validate the <code>else</code> condition.</p>
@@ -970,11 +970,11 @@ if (name === &quot;John&quot;) {
       
     </sequential>
   
-    <sequential display_name="Comparators" url_name="comparators-s2qutiyu" >
+    <sequential display_name="Comparators"  >
      
 
       
-      <vertical display_name="Comparators - Step 1" url_name="x2rewxvt">
+      <vertical display_name="Comparators - Step 1" >
         <html display_name="Comparators - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1008,7 +1008,7 @@ if (name === &quot;John&quot;) {
        
 
       
-      <vertical display_name="Comparators - Step 2" url_name="h0k49urd">
+      <vertical display_name="Comparators - Step 2" >
         <problem display_name="Comparators - Step 2">
             <text>
                 <p>Add a condition to change the value of <code>a</code> to the number 10 if <code>x</code> is bigger than 5.</p>
@@ -1047,7 +1047,7 @@ if (x &gt; 5) {
      
 
       
-      <vertical display_name="Comparators - Step 3" url_name="57n31wma">
+      <vertical display_name="Comparators - Step 3" >
         <html display_name="Comparators - Step 3">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1068,11 +1068,11 @@ if (x &gt; 5) {
       
     </sequential>
   
-    <sequential display_name="Concatenate" url_name="concatenate-o6vav4ye" >
+    <sequential display_name="Concatenate"  >
      
 
       
-      <vertical display_name="Concatenate - Step 1" url_name="gxffdkvl">
+      <vertical display_name="Concatenate - Step 1" >
         <html display_name="Concatenate - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1102,7 +1102,7 @@ if (x &gt; 5) {
        
 
       
-      <vertical display_name="Concatenate - Step 2" url_name="bb3mf0n2">
+      <vertical display_name="Concatenate - Step 2" >
         <problem display_name="Concatenate - Step 2">
             <text>
                 <p>Fill up the 2 conditions so that <code>primaryCategory</code> equals <code>&quot;E/J&quot;</code> only if name equals <code>&quot;John&quot;</code> and country is <code>&quot;England&quot;</code>, and so that <code>secondaryCategory</code> equals <code>&quot;E|J&quot;</code> only if name equals <code>&quot;John&quot;</code> or country is <code>&quot;England&quot;</code></p>
@@ -1167,13 +1167,13 @@ if (name === &quot;John&quot; || country === &quot;England&quot;) {
         
   </chapter>
  
-  <chapter display_name="Arrays" url_name="arrays-gmngsbk8-2wrxkqaj">
+  <chapter display_name="Arrays" >
   
-    <sequential display_name="Arrays" url_name="arrays-gmngsbk8" >
+    <sequential display_name="Arrays"  >
      
 
       
-      <vertical display_name="Arrays - Step 1" url_name="86lodes8">
+      <vertical display_name="Arrays - Step 1" >
         <html display_name="Arrays - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1196,11 +1196,11 @@ if (name === &quot;John&quot; || country === &quot;England&quot;) {
       
     </sequential>
   
-    <sequential display_name="Indices" url_name="indices-m9t3atpc" >
+    <sequential display_name="Indices"  >
      
 
       
-      <vertical display_name="Indices - Step 1" url_name="pln20e9d">
+      <vertical display_name="Indices - Step 1" >
         <html display_name="Indices - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1228,7 +1228,7 @@ if (name === &quot;John&quot; || country === &quot;England&quot;) {
        
 
       
-      <vertical display_name="Indices - Step 2" url_name="cvgpm58t">
+      <vertical display_name="Indices - Step 2" >
         <problem display_name="Indices - Step 2">
             <text>
                 <p>Define the variables using the indices of the array</p>
@@ -1274,11 +1274,11 @@ assert(mazda === &quot;Mazda&quot;);", "context":    ""} } </grader_payload>
       
     </sequential>
   
-    <sequential display_name="Length" url_name="length-xt4iuipt" >
+    <sequential display_name="Length"  >
      
 
       
-      <vertical display_name="Length - Step 1" url_name="m6hv71yw">
+      <vertical display_name="Length - Step 1" >
         <html display_name="Length - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1303,7 +1303,7 @@ assert(mazda === &quot;Mazda&quot;);", "context":    ""} } </grader_payload>
        
 
       
-      <vertical display_name="Length - Step 2" url_name="2pii76fg">
+      <vertical display_name="Length - Step 2" >
         <problem display_name="Length - Step 2">
             <text>
                 <p>Define the variable a to be the number value of the length of the array</p>
@@ -1340,13 +1340,13 @@ var a = 6;", "validation": "assert (a === 6)", "context":    ""} } </grader_payl
         
   </chapter>
  
-  <chapter display_name="Loops" url_name="loops-k6s0ae25-h15u13pw">
+  <chapter display_name="Loops" >
   
-    <sequential display_name="Loops" url_name="loops-k6s0ae25" >
+    <sequential display_name="Loops"  >
      
 
       
-      <vertical display_name="Loops - Step 1" url_name="moqunaf6">
+      <vertical display_name="Loops - Step 1" >
         <html display_name="Loops - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1376,11 +1376,11 @@ doThing(cars[<span class="hljs-number">4</span>]);
       
     </sequential>
   
-    <sequential display_name="For" url_name="for-xbu0n8so" >
+    <sequential display_name="For"  >
      
 
       
-      <vertical display_name="For - Step 1" url_name="1ca5ihbd">
+      <vertical display_name="For - Step 1" >
         <html display_name="For - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1411,7 +1411,7 @@ doThing(cars[<span class="hljs-number">4</span>]);
        
 
       
-      <vertical display_name="For - Step 2" url_name="8qoqwtk7">
+      <vertical display_name="For - Step 2" >
         <problem display_name="For - Step 2">
             <text>
                 <p>Using a for-loop, create a variable named <code>message</code> that equals the concatenation of integers (0, 1, 2, ...) from 0 to 99.</p>
@@ -1451,11 +1451,11 @@ assert(message === message2);", "context":    ""} } </grader_payload>
       
     </sequential>
   
-    <sequential display_name="While" url_name="while-odwpyc11" >
+    <sequential display_name="While"  >
      
 
       
-      <vertical display_name="While - Step 1" url_name="2ds82jvh">
+      <vertical display_name="While - Step 1" >
         <html display_name="While - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1492,7 +1492,7 @@ assert(message === message2);", "context":    ""} } </grader_payload>
        
 
       
-      <vertical display_name="While - Step 2" url_name="4h22djsw">
+      <vertical display_name="While - Step 2" >
         <problem display_name="While - Step 2">
             <text>
                 <p>Using a while-loop, create a variable named <code>message</code> that equals the concatenation of integers (0, 1, 2, ...) as long as its length (<code>message.length</code>) is less than 100.</p>
@@ -1540,13 +1540,13 @@ assert(message === message2);", "context":    ""} } </grader_payload>
         
   </chapter>
  
-  <chapter display_name="Functions" url_name="functions-d5lgsjpn-t3ed306u">
+  <chapter display_name="Functions" >
   
-    <sequential display_name="Functions" url_name="functions-d5lgsjpn" >
+    <sequential display_name="Functions"  >
      
 
       
-      <vertical display_name="Functions - Step 1" url_name="wrnf4bj5">
+      <vertical display_name="Functions - Step 1" >
         <html display_name="Functions - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1565,11 +1565,11 @@ assert(message === message2);", "context":    ""} } </grader_payload>
       
     </sequential>
   
-    <sequential display_name="Declare" url_name="declare-x3rw5yr7" >
+    <sequential display_name="Declare"  >
      
 
       
-      <vertical display_name="Declare - Step 1" url_name="pylh2c7r">
+      <vertical display_name="Declare - Step 1" >
         <html display_name="Declare - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1604,7 +1604,7 @@ assert(message === message2);", "context":    ""} } </grader_payload>
        
 
       
-      <vertical display_name="Declare - Step 2" url_name="jl932obo">
+      <vertical display_name="Declare - Step 2" >
         <problem display_name="Declare - Step 2">
             <text>
                 <p>Declare a function named <code>triple</code> that takes an argument and returns its triple.</p>
@@ -1639,11 +1639,11 @@ assert(triple(10) === 30);", "context":    ""} } </grader_payload>
       
     </sequential>
   
-    <sequential display_name="Higher order" url_name="higher-order-ip5glj2c" >
+    <sequential display_name="Higher order"  >
      
 
       
-      <vertical display_name="Higher order - Step 1" url_name="jnkexarp">
+      <vertical display_name="Higher order - Step 1" >
         <html display_name="Higher order - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1735,7 +1735,7 @@ triple(<span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 
        
 
       
-      <vertical display_name="Higher order - Step 2" url_name="k6m0v4ia">
+      <vertical display_name="Higher order - Step 2" >
         <problem display_name="Higher order - Step 2">
             <text>
                 <p>Define a function named <code>negate</code> that takes <code>add1</code> as argument and returns a function, that returns the negation of the value returned by <code>add1</code>. (Things get a bit more complicated ;) )</p>
@@ -1804,13 +1804,13 @@ negate(add1)(5);", "validation": "assert(negate(add1)(5) === -6);", "context":  
         
   </chapter>
  
-  <chapter display_name="Objects" url_name="objects-l4a173hw-ac5ldpff">
+  <chapter display_name="Objects" >
   
-    <sequential display_name="Objects" url_name="objects-l4a173hw" >
+    <sequential display_name="Objects"  >
      
 
       
-      <vertical display_name="Objects - Step 1" url_name="rmwsldq1">
+      <vertical display_name="Objects - Step 1" >
         <html display_name="Objects - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1829,11 +1829,11 @@ negate(add1)(5);", "validation": "assert(negate(add1)(5) === -6);", "context":  
       
     </sequential>
   
-    <sequential display_name="Creation" url_name="creation-a15wq3jr" >
+    <sequential display_name="Creation"  >
      
 
       
-      <vertical display_name="Creation - Step 1" url_name="lbhc34xi">
+      <vertical display_name="Creation - Step 1" >
         <html display_name="Creation - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1868,11 +1868,11 @@ negate(add1)(5);", "validation": "assert(negate(add1)(5) === -6);", "context":  
       
     </sequential>
   
-    <sequential display_name="Properties" url_name="properties-5nmijtdh" >
+    <sequential display_name="Properties"  >
      
 
       
-      <vertical display_name="Properties - Step 1" url_name="21l88ot4">
+      <vertical display_name="Properties - Step 1" >
         <html display_name="Properties - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1919,11 +1919,11 @@ language[<span class="hljs-string">'newProperty'</span>] = <span class="hljs-str
       
     </sequential>
   
-    <sequential display_name="Mutable" url_name="mutable-xh66klnq" >
+    <sequential display_name="Mutable"  >
      
 
       
-      <vertical display_name="Mutable - Step 1" url_name="1tehnuom">
+      <vertical display_name="Mutable - Step 1" >
         <html display_name="Mutable - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1948,11 +1948,11 @@ language[<span class="hljs-string">'newProperty'</span>] = <span class="hljs-str
       
     </sequential>
   
-    <sequential display_name="Reference" url_name="reference-eb33ehdn" >
+    <sequential display_name="Reference"  >
      
 
       
-      <vertical display_name="Reference - Step 1" url_name="om082r4x">
+      <vertical display_name="Reference - Step 1" >
         <html display_name="Reference - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -1986,11 +1986,11 @@ a = b = c = {};
       
     </sequential>
   
-    <sequential display_name="Prototype" url_name="prototype-xm6tyc41" >
+    <sequential display_name="Prototype"  >
      
 
       
-      <vertical display_name="Prototype - Step 1" url_name="2orprwxe">
+      <vertical display_name="Prototype - Step 1" >
         <html display_name="Prototype - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -2037,11 +2037,11 @@ child.age = <span class="hljs-number">8</span>;
       
     </sequential>
   
-    <sequential display_name="Delete" url_name="delete-ocskcxfr" >
+    <sequential display_name="Delete"  >
      
 
       
-      <vertical display_name="Delete - Step 1" url_name="f679qg0d">
+      <vertical display_name="Delete - Step 1" >
         <html display_name="Delete - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -2070,11 +2070,11 @@ Removing a property from an object may allow a property from the prototype chain
       
     </sequential>
   
-    <sequential display_name="Enumeration" url_name="enumeration-lg7eo544" >
+    <sequential display_name="Enumeration"  >
      
 
       
-      <vertical display_name="Enumeration - Step 1" url_name="6awdw84j">
+      <vertical display_name="Enumeration - Step 1" >
         <html display_name="Enumeration - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />
@@ -2109,11 +2109,11 @@ sentence = sentence.substr(<span class="hljs-number">0</span>,sentence.length-<s
       
     </sequential>
   
-    <sequential display_name="Global footprint" url_name="global-footprint-gamd2syr" >
+    <sequential display_name="Global footprint"  >
      
 
       
-      <vertical display_name="Global footprint - Step 1" url_name="eshvnad6">
+      <vertical display_name="Global footprint - Step 1" >
         <html display_name="Global footprint - Step 1">
 
           <script type='text/javascript' src='/static/client.js' />

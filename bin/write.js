@@ -17,7 +17,7 @@
         shelljs.mkdir('-p', './_course');
         shelljs.mkdir('-p', './_course/about');
         shelljs.mkdir('-p', './_course/static');
-        shelljs.cp(metadata.course.origDir + "/_assets/*", "./_course/static");
+        shelljs.cp(__dirname + "/../static/*", "./_course/static");
         for (k in data) {
           v = data[k];
           debug("Writing " + k);

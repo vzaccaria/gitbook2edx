@@ -11,36 +11,49 @@
  {% if course.image %} course_image="{{course.image}}" {% endif %}
  
  >
+ 
  {% for chapter in chapters %}
   <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
-  {% for section in chapter %}
-    <sequential display_name="{{section.displayName}}" url_name="{{section.urlName}}" >
-     {% for subsection in section.content %}
-      {% if subsection.type == 'normal' %}
-       <vertical display_name="{{section.displayName}} - Step {{forloop.index}}" url_name="{{section.urlName}}-{{forloop.index}}">
-        <html display_name="{{section.displayName}} - Step {{forloop.index}}">
+  {% for sequential in chapter %}
+    <sequential display_name="{{sequential.displayName}}" url_name="{{sequential.urlName}}" >
+     {% for vertical in sequential.verticals %}
 
-         {% if assets.css %}
-          <link rel="stylesheet" type="text/css" href='/static/{{assets.css}}' />
-         {% endif %}
+      {% if vertical.type == 'normal' %}
+      <vertical display_name="{{sequential.displayName}} - Step {{forloop.index}}" url_name="{{vertical.urlName}}">
+        <html display_name="{{sequential.displayName}} - Step {{forloop.index}}">
 
-         {% if assets-url.css %}
-          <link rel="stylesheet" type="text/css" href='{{assets-url.css}}' />
-         {% endif %}
-
-         {% if assets.js %}
-          <script type='text/javascript' src='/static/{{assets.js}}' />
-         {% endif %}
-
-         {% if assets-url.js %}
-          <script type='text/javascript' src='{{assets-url.js}}' />
-         {% endif %}
+          <script type='text/javascript' src='/static/client.js' />
          
-         {{subsection.content}}
+         {{vertical.content}}
         </html> 
       </vertical>
-      {% endif %}
-     {% endfor %}
+      {% endif %} 
+
+      {% if vertical.type == 'exercise' %}
+      <vertical display_name="{{sequential.displayName}} - Step {{forloop.index}}" url_name="{{vertical.urlName}}">
+        <problem display_name="{{sequential.displayName}} - Step {{forloop.index}}">
+            <text>
+                {{vertical.content}}
+            </text>
+
+            <coderesponse queuename="{{xqueue.name}}">
+                <textbox rows="10" cols="80" mode="{{vertical.lang}}" tabsize="4" />
+                <codeparam>
+                    <initial_display>{{vertical.code.base}}</initial_display>
+                    <answer_display>{{vertical.code.solution}}</answer_display>
+                    <grader_payload> {"lang": "{{vertical.lang}}", "code": {"base":       "{{vertical.code.base}}", "solution":   "{{vertical.code.solution}}", "validation": "{{vertical.code.validation}}", "context":    "{{vertical.code.context}}"} } </grader_payload>
+                </codeparam>
+                
+            </coderesponse>
+           
+
+        </problem>
+      </vertical>
+
+      {% endif %}  
+
+
+     {% endfor %} 
     </sequential>
   {% endfor %}      
   </chapter>

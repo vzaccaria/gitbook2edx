@@ -2,13 +2,29 @@ glob     = require('glob')
 fs       = require('fs')
 bluebird = require('bluebird')
 _        = require('lodash')
-debug = require('debug')(__filename)
-
+debug    = require('debug')(__filename)
+uid      = require('uid')
 bluebird.promisifyAll(fs)
 
 y = require('js-yaml')
 
 $ = require('underscore.string')
+
+escape-section = (d, name) ->
+    if d.code?[name]?
+        d.code[name] = _.escape(d.code[name])
+        d.code[name] = d.code[name].replace(/--/g, '')
+
+
+escape-code-sections = (data) ->
+    for d in data.sections
+        d.url-name = uid(8)
+        escape-section(d, 'solution')
+        escape-section(d, 'base')
+        escape-section(d, 'validation')
+        escape-section(d, 'context')
+    return data
+
 
 _module = ->
 
@@ -30,18 +46,18 @@ _module = ->
             level = data.progress.current.level
             matches = (level == /(\d)+.?(\d)*/)
             if matches
-                ret = {
+                sequential = {
                     chapter: parseInt(matches[1])
                     title: data.progress.current.title
-                    content: data.sections
+                    verticals: escape-code-sections(data).sections
                 }
-                ret.section = parseInt(matches[2]) if matches[2]?
-                ret.section ?= 0
+                sequential.section = parseInt(matches[2]) if matches[2]?
+                sequential.section ?= 0
 
-                ret.displayName = ret.title
-                ret.name = $.slugify(ret.displayName)
-                ret.urlName = ret.name
-                return ret
+                sequential.displayName = sequential.title
+                sequential.name = $.slugify(sequential.displayName)
+                sequential.urlName = sequential.name+"-#{uid(8)}"
+                return sequential 
             else 
                 return undefined
         .then ->
@@ -49,9 +65,10 @@ _module = ->
             grouped = [ v for k,v of grouped ]
             grouped = [ _.sortBy(v, 'section') for v in grouped ]
 
+
             grouped = _.map grouped, ->
                 it.displayName = it[0].displayName
-                it.urlName = it[0].urlName
+                it.urlName = "#{it[0].urlName}-#{uid(8)}"
                 return it
 
             debug("All data gathered into a single structure")
