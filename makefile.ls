@@ -33,6 +33,7 @@ parse ->
                 @make "exec"
                 @make "build-assets"
                 @cmd "./test/test.sh -n"
+                @cmd "./bin/gitbook2edx info test/javascript-master"
                 ]
 
     @collect "clean", -> [

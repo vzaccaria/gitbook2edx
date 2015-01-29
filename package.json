@@ -13,6 +13,7 @@
   "license": "BSD",
   "dependencies": {
     "bluebird": "~2.3.11",
+    "chalk": "^0.5.1",
     "cssify": "^0.6.0",
     "date.js": "~0.2.0",
     "debug": "~2.1.0",

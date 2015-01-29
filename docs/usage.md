@@ -1,6 +1,7 @@
 
 Usage:
     gitbook2edx gen DIR [ -c CONFIG ]
+    gitbook2edx info DIR [ -c CONFIG ]
     gitbook2edx -h | --help 
 
 Options:

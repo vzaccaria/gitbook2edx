@@ -7,6 +7,7 @@ require! 'fs'
 {condense} = require('./condense')
 {write}    = require('./write')
 {gitbook} = require('./gitbook')
+chalk = require('chalk')
 shelljs = require('shelljs')
 
 doc = shelljs.cat(__dirname+"/../docs/usage.md")
@@ -46,6 +47,17 @@ if o['gen']
         condense(book-dir, source-dir, yaml-config)
     .then build
     .then write
+
+if o['info']
+    gitbook(source-dir)
+    .then ->
+        condense(book-dir, source-dir, yaml-config)
+    .then ->
+        console.log chalk.bold("Course name:   ") + it.course.displayName + "   (not part of the url)"
+        console.log chalk.bold("Organization:  ") + it.organization.name
+        console.log chalk.bold("Course number: ") + it.course.number
+        console.log chalk.bold("Course run:    ") + it.course.year + "-" + it.course.season
+
 
 
 
