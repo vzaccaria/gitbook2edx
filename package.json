@@ -6,7 +6,7 @@
     "gitbook2edx": "./bin/gitbook2edx"
   },
   "scripts": {
-    "test": "./scripts/test.sh"
+    "test": "./test/test.sh"
   },
   "keywords": [],
   "author": "Vittorio Zaccaria",
@@ -30,6 +30,7 @@
     "pretty-xml": "^1.0.3",
     "shelljs": "~0.3.0",
     "uid": "0.0.2",
-    "underscore.string": "~2.4.0"
+    "underscore.string": "~2.4.0",
+    "xyz": "^0.5.0"
   }
 }
