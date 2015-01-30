@@ -43,6 +43,12 @@ parse ->
         @cmd "rm -rf course.tar.gz"
     ]
 
+    for l in ["major", "minor", "patch"]
+
+        @collect "release-#l", -> [
+            @cmd "./node_modules/.bin/xyz --increment #l"
+        ]
+
 
 
         
