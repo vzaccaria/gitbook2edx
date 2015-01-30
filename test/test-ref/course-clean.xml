@@ -127,7 +127,9 @@ it will be ignored by the interpreter
                 <codeparam>
                     <initial_display>Forse ci siamo?</initial_display>
                     <answer_display>/* Mark me as a comment */</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "Forse ci siamo?", "solution":   "/* Mark me as a comment */", "validation": "assert(true);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoiRm9yc2UgY2kgc2lhbW8_Iiwic29sdXRpb24iOiIvKiBNYXJrIG1lIGFzIGEgY29tbWVudCAqLyIsInZhbGlkYXRpb24iOiJhc3NlcnQodHJ1ZSk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -243,8 +245,9 @@ y = 5
                     <initial_display>
 </initial_display>
                     <answer_display>var a;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "
-", "solution":   "var a;", "validation": "a;", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoiXG4iLCJzb2x1dGlvbiI6InZhciBhOyIsInZhbGlkYXRpb24iOiJhOyIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -365,10 +368,9 @@ var b = a;
 
 var x = 10;
 var y = a;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var a = 11;", "solution":   "var a = 11;
-
-var x = 10;
-var y = a;", "validation": "assert(x === 10 &amp;&amp; y === a);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGEgPSAxMTsiLCJzb2x1dGlvbiI6InZhciBhID0gMTE7XG5cbnZhciB4ID0gMTA7XG52YXIgeSA9IGE7IiwidmFsaWRhdGlvbiI6ImFzc2VydCh4ID09PSAxMCAmJiB5ID09PSBhKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -436,17 +438,9 @@ var c = 6758.768;
 var d = 45084;
 
 var x = ((a + b) / c) * d;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var a = 2034547;
-var b = 1.567;
-var c = 6758.768;
-var d = 45084;
-
-var x =", "solution":   "var a = 2034547;
-var b = 1.567;
-var c = 6758.768;
-var d = 45084;
-
-var x = ((a + b) / c) * d;", "validation": "assert(x === (((a + b) / c) * d));", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGEgPSAyMDM0NTQ3O1xudmFyIGIgPSAxLjU2NztcbnZhciBjID0gNjc1OC43Njg7XG52YXIgZCA9IDQ1MDg0O1xuXG52YXIgeCA9Iiwic29sdXRpb24iOiJ2YXIgYSA9IDIwMzQ1NDc7XG52YXIgYiA9IDEuNTY3O1xudmFyIGMgPSA2NzU4Ljc2ODtcbnZhciBkID0gNDUwODQ7XG5cbnZhciB4ID0gKChhICsgYikgLyBjKSAqIGQ7IiwidmFsaWRhdGlvbiI6ImFzc2VydCh4ID09PSAoKChhICsgYikgLyBjKSAqIGQpKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -513,12 +507,10 @@ var x = ((a + b) / c) * d;", "validation": "assert(x === (((a + b) / c) * d));",
 var c =</initial_display>
                     <answer_display>var x = 10;
 
-var c = (x) % 3;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var x = 10;
-
-var c =", "solution":   "var x = 10;
-
-var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grader_payload>
+var c = (--x) % 3;</answer_display>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIHggPSAxMDtcblxudmFyIGMgPSIsInNvbHV0aW9uIjoidmFyIHggPSAxMDtcblxudmFyIGMgPSAoLS14KSAlIDM7IiwidmFsaWRhdGlvbiI6ImFzc2VydChjID09PSAwKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -610,8 +602,9 @@ var c = (x) % 3;", "validation": "assert(c === 0);", "context":    ""} } </grade
                     <initial_display>
 </initial_display>
                     <answer_display>var str = &#39;abc&#39;;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "
-", "solution":   "var str = &#39;abc&#39;;", "validation": "assert(str === &#39;abc&#39;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoiXG4iLCJzb2x1dGlvbiI6InZhciBzdHIgPSAnYWJjJzsiLCJ2YWxpZGF0aW9uIjoiYXNzZXJ0KHN0ciA9PT0gJ2FiYycpOyIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -670,13 +663,9 @@ var fullName =</initial_display>
 var lastName = &quot;Smith&quot;;
 
 var fullName = firstName + &quot; &quot; + lastName;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var firstName = &quot;John&quot;;
-var lastName = &quot;Smith&quot;;
-
-var fullName =", "solution":   "var firstName = &quot;John&quot;;
-var lastName = &quot;Smith&quot;;
-
-var fullName = firstName + &quot; &quot; + lastName;", "validation": "assert(fullName === &#39;John Smith&#39;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGZpcnN0TmFtZSA9IFwiSm9oblwiO1xudmFyIGxhc3ROYW1lID0gXCJTbWl0aFwiO1xuXG52YXIgZnVsbE5hbWUgPSIsInNvbHV0aW9uIjoidmFyIGZpcnN0TmFtZSA9IFwiSm9oblwiO1xudmFyIGxhc3ROYW1lID0gXCJTbWl0aFwiO1xuXG52YXIgZnVsbE5hbWUgPSBmaXJzdE5hbWUgKyBcIiBcIiArIGxhc3ROYW1lOyIsInZhbGlkYXRpb24iOiJhc3NlcnQoZnVsbE5hbWUgPT09ICdKb2huIFNtaXRoJyk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -735,11 +724,9 @@ var size =</initial_display>
                     <answer_display>var str = &quot;Hello World&quot;;
 
 var size = str.length;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var str = &quot;Hello World&quot;;
-
-var size =", "solution":   "var str = &quot;Hello World&quot;;
-
-var size = str.length;", "validation": "assert(size === str.length);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIHN0ciA9IFwiSGVsbG8gV29ybGRcIjtcblxudmFyIHNpemUgPSIsInNvbHV0aW9uIjoidmFyIHN0ciA9IFwiSGVsbG8gV29ybGRcIjtcblxudmFyIHNpemUgPSBzdHIubGVuZ3RoOyIsInZhbGlkYXRpb24iOiJhc3NlcnQoc2l6ZSA9PT0gc3RyLmxlbmd0aCk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -855,15 +842,9 @@ if (name === &quot;John&quot;) {
 if (name === &quot;John&quot;) {
 
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var name =
-
-if (name === &quot;John&quot;) {
-
-}", "solution":   "var name = &quot;John&quot;;
-
-if (name === &quot;John&quot;) {
-
-}", "validation": "assert(name === &quot;John&quot;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIG5hbWUgPVxuXG5pZiAobmFtZSA9PT0gXCJKb2huXCIpIHtcblxufSIsInNvbHV0aW9uIjoidmFyIG5hbWUgPSBcIkpvaG5cIjtcblxuaWYgKG5hbWUgPT09IFwiSm9oblwiKSB7XG5cbn0iLCJ2YWxpZGF0aW9uIjoiYXNzZXJ0KG5hbWUgPT09IFwiSm9oblwiKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -943,19 +924,9 @@ if (name === &quot;John&quot;) {
 } else if (name === &quot;Aaron&quot;) {
     // Valid this condition
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var name =
-
-if (name === &quot;John&quot;) {
-
-} else if (name === &quot;Aaron&quot;) {
-    // Valid this condition
-}", "solution":   "var name = &quot;Aaron&quot;;
-
-if (name === &quot;John&quot;) {
-
-} else if (name === &quot;Aaron&quot;) {
-    // Valid this condition
-}", "validation": "assert(name === &quot;Aaron&quot;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIG5hbWUgPVxuXG5pZiAobmFtZSA9PT0gXCJKb2huXCIpIHtcblxufSBlbHNlIGlmIChuYW1lID09PSBcIkFhcm9uXCIpIHtcbiAgICAvLyBWYWxpZCB0aGlzIGNvbmRpdGlvblxufSIsInNvbHV0aW9uIjoidmFyIG5hbWUgPSBcIkFhcm9uXCI7XG5cbmlmIChuYW1lID09PSBcIkpvaG5cIikge1xuXG59IGVsc2UgaWYgKG5hbWUgPT09IFwiQWFyb25cIikge1xuICAgIC8vIFZhbGlkIHRoaXMgY29uZGl0aW9uXG59IiwidmFsaWRhdGlvbiI6ImFzc2VydChuYW1lID09PSBcIkFhcm9uXCIpOyIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1026,13 +997,9 @@ var a = 0;
 if (x &gt; 5) {
     a = 10;
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var x = 6;
-var a = 0;", "solution":   "var x = 6;
-var a = 0;
-
-if (x &gt; 5) {
-    a = 10;
-}", "validation": "assert(a === 10);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIHggPSA2O1xudmFyIGEgPSAwOyIsInNvbHV0aW9uIjoidmFyIHggPSA2O1xudmFyIGEgPSAwO1xuXG5pZiAoeCA-IDUpIHtcbiAgICBhID0gMTA7XG59IiwidmFsaWRhdGlvbiI6ImFzc2VydChhID09PSAxMCk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1132,25 +1099,9 @@ if (name === &quot;John&quot; &amp;&amp; country === &quot;England&quot;) {
 if (name === &quot;John&quot; || country === &quot;England&quot;) {
     secondaryCategory = &quot;E|J&quot;;
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var name = &quot;John&quot;;
-var country = &quot;England&quot;;
-var primaryCategory, secondaryCategory;
-
-if ( /* Fill here */ ) {
-    primaryCategory = &quot;E/J&quot;;
-}
-if ( /* Fill here */ ) {
-    secondaryCategory = &quot;E|J&quot;;
-}", "solution":   "var name = &quot;John&quot;;
-var country = &quot;England&quot;;
-var primaryCategory, secondaryCategory;
-
-if (name === &quot;John&quot; &amp;&amp; country === &quot;England&quot;) {
-    primaryCategory = &quot;E/J&quot;;
-}
-if (name === &quot;John&quot; || country === &quot;England&quot;) {
-    secondaryCategory = &quot;E|J&quot;;
-}", "validation": "assert(primaryCategory === &quot;E/J&quot; &amp;&amp; secondaryCategory === &quot;E|J&quot;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIG5hbWUgPSBcIkpvaG5cIjtcbnZhciBjb3VudHJ5ID0gXCJFbmdsYW5kXCI7XG52YXIgcHJpbWFyeUNhdGVnb3J5LCBzZWNvbmRhcnlDYXRlZ29yeTtcblxuaWYgKCAvKiBGaWxsIGhlcmUgKi8gKSB7XG4gICAgcHJpbWFyeUNhdGVnb3J5ID0gXCJFL0pcIjtcbn1cbmlmICggLyogRmlsbCBoZXJlICovICkge1xuICAgIHNlY29uZGFyeUNhdGVnb3J5ID0gXCJFfEpcIjtcbn0iLCJzb2x1dGlvbiI6InZhciBuYW1lID0gXCJKb2huXCI7XG52YXIgY291bnRyeSA9IFwiRW5nbGFuZFwiO1xudmFyIHByaW1hcnlDYXRlZ29yeSwgc2Vjb25kYXJ5Q2F0ZWdvcnk7XG5cbmlmIChuYW1lID09PSBcIkpvaG5cIiAmJiBjb3VudHJ5ID09PSBcIkVuZ2xhbmRcIikge1xuICAgIHByaW1hcnlDYXRlZ29yeSA9IFwiRS9KXCI7XG59XG5pZiAobmFtZSA9PT0gXCJKb2huXCIgfHwgY291bnRyeSA9PT0gXCJFbmdsYW5kXCIpIHtcbiAgICBzZWNvbmRhcnlDYXRlZ29yeSA9IFwiRXxKXCI7XG59IiwidmFsaWRhdGlvbiI6ImFzc2VydChwcmltYXJ5Q2F0ZWdvcnkgPT09IFwiRS9KXCIgJiYgc2Vjb25kYXJ5Q2F0ZWdvcnkgPT09IFwiRXxKXCIpOyIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1248,18 +1199,9 @@ var honda = cars[1];
 var ford = cars[3];
 var chevy = cars[2];
 var mazda = cars[0];</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var cars = [&quot;Mazda&quot;, &quot;Honda&quot;, &quot;Chevy&quot;, &quot;Ford&quot;]
-var honda =
-var ford =
-var chevy =
-var mazda =", "solution":   "var cars = [&quot;Mazda&quot;, &quot;Honda&quot;, &quot;Chevy&quot;, &quot;Ford&quot;]
-var honda = cars[1];
-var ford = cars[3];
-var chevy = cars[2];
-var mazda = cars[0];", "validation": "assert(honda === &quot;Honda&quot;);
-assert(ford === &quot;Ford&quot;);
-assert(chevy === &quot;Chevy&quot;);
-assert(mazda === &quot;Mazda&quot;);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGNhcnMgPSBbXCJNYXpkYVwiLCBcIkhvbmRhXCIsIFwiQ2hldnlcIiwgXCJGb3JkXCJdXG52YXIgaG9uZGEgPVxudmFyIGZvcmQgPVxudmFyIGNoZXZ5ID1cbnZhciBtYXpkYSA9Iiwic29sdXRpb24iOiJ2YXIgY2FycyA9IFtcIk1hemRhXCIsIFwiSG9uZGFcIiwgXCJDaGV2eVwiLCBcIkZvcmRcIl1cbnZhciBob25kYSA9IGNhcnNbMV07XG52YXIgZm9yZCA9IGNhcnNbM107XG52YXIgY2hldnkgPSBjYXJzWzJdO1xudmFyIG1hemRhID0gY2Fyc1swXTsiLCJ2YWxpZGF0aW9uIjoiYXNzZXJ0KGhvbmRhID09PSBcIkhvbmRhXCIpO1xuYXNzZXJ0KGZvcmQgPT09IFwiRm9yZFwiKTtcbmFzc2VydChjaGV2eSA9PT0gXCJDaGV2eVwiKTtcbmFzc2VydChtYXpkYSA9PT0gXCJNYXpkYVwiKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1319,11 +1261,9 @@ var a =</initial_display>
                     <answer_display>var array = [1, 1, 2, 3, 5, 8];
 var l = array.length;
 var a = 6;</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var array = [1, 1, 2, 3, 5, 8];
-var l = array.length;
-var a =", "solution":   "var array = [1, 1, 2, 3, 5, 8];
-var l = array.length;
-var a = 6;", "validation": "assert (a === 6)", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGFycmF5ID0gWzEsIDEsIDIsIDMsIDUsIDhdO1xudmFyIGwgPSBhcnJheS5sZW5ndGg7XG52YXIgYSA9Iiwic29sdXRpb24iOiJ2YXIgYXJyYXkgPSBbMSwgMSwgMiwgMywgNSwgOF07XG52YXIgbCA9IGFycmF5Lmxlbmd0aDtcbnZhciBhID0gNjsiLCJ2YWxpZGF0aW9uIjoiYXNzZXJ0IChhID09PSA2KSIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1427,16 +1367,9 @@ doThing(cars[<span class="hljs-number">4</span>]);
 for(var i = 0; i &lt; 100; i++){
     message = message + i;
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var message = &quot;&quot;;", "solution":   "var message = &quot;&quot;;
-
-for(var i = 0; i &lt; 100; i++){
-    message = message + i;
-}", "validation": "var message2 = &quot;&quot;
-
-for(var i = 0; i &lt; 100; i++){
-    message2 = message2 + i;
-}
-assert(message === message2);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIG1lc3NhZ2UgPSBcIlwiOyIsInNvbHV0aW9uIjoidmFyIG1lc3NhZ2UgPSBcIlwiO1xuXG5mb3IodmFyIGkgPSAwOyBpIDwgMTAwOyBpKyspe1xuICAgIG1lc3NhZ2UgPSBtZXNzYWdlICsgaTtcbn0iLCJ2YWxpZGF0aW9uIjoidmFyIG1lc3NhZ2UyID0gXCJcIlxuXG5mb3IodmFyIGkgPSAwOyBpIDwgMTAwOyBpKyspe1xuICAgIG1lc3NhZ2UyID0gbWVzc2FnZTIgKyBpO1xufVxuYXNzZXJ0KG1lc3NhZ2UgPT09IG1lc3NhZ2UyKTsiLCJjb250ZXh0IjpudWxsLCJsYW5nIjoiamF2YXNjcmlwdCJ9"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1510,20 +1443,9 @@ while (message.length &lt; 100) {
     message = message + i;
     i = i + 1;
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var message = &quot;&quot;;", "solution":   "var message = &quot;&quot;;
-var i = 0;
-
-while (message.length &lt; 100) {
-    message = message + i;
-    i = i + 1;
-}", "validation": "var message2 = &quot;&quot;;
-var i2 = 0;
-
-while (message2.length &lt; 100) {
-    message2 = message2 + i2;
-    i2 = i2 + 1;
-}
-assert(message === message2);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIG1lc3NhZ2UgPSBcIlwiOyIsInNvbHV0aW9uIjoidmFyIG1lc3NhZ2UgPSBcIlwiO1xudmFyIGkgPSAwO1xuXG53aGlsZSAobWVzc2FnZS5sZW5ndGggPCAxMDApIHtcbiAgICBtZXNzYWdlID0gbWVzc2FnZSArIGk7XG4gICAgaSA9IGkgKyAxO1xufSIsInZhbGlkYXRpb24iOiJ2YXIgbWVzc2FnZTIgPSBcIlwiO1xudmFyIGkyID0gMDtcblxud2hpbGUgKG1lc3NhZ2UyLmxlbmd0aCA8IDEwMCkge1xuICAgIG1lc3NhZ2UyID0gbWVzc2FnZTIgKyBpMjtcbiAgICBpMiA9IGkyICsgMTtcbn1cbmFzc2VydChtZXNzYWdlID09PSBtZXNzYWdlMik7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1619,12 +1541,9 @@ assert(message === message2);", "context":    ""} } </grader_payload>
                     <answer_display>var triple = function(x) {
     return x * 3;
 }</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "
-", "solution":   "var triple = function(x) {
-    return x * 3;
-}", "validation": "assert(triple);
-assert(triple(4) === 12);
-assert(triple(10) === 30);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoiXG4iLCJzb2x1dGlvbiI6InZhciB0cmlwbGUgPSBmdW5jdGlvbih4KSB7XG4gICAgcmV0dXJuIHggKiAzO1xufSIsInZhbGlkYXRpb24iOiJhc3NlcnQodHJpcGxlKTtcbmFzc2VydCh0cmlwbGUoNCkgPT09IDEyKTtcbmFzc2VydCh0cmlwbGUoMTApID09PSAzMCk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
@@ -1767,27 +1686,9 @@ var negate = function(func) {
 }
 
 negate(add1)(5);</answer_display>
-                    <grader_payload> {"lang": "javascript", "code": {"base":       "var add1 = function (x) {
-    return x + 1;
-};
-
-var negate = function(func) {
-    // TODO
-};
-
-// Should return -6
-// Because (5+1) * -1 = -6
-negate(add1)(5);", "solution":   "var add1 = function (x) {
-    return x + 1;
-}
-
-var negate = function(func) {
-    return function(x) {
-        return -1 * func(x);
-    }
-}
-
-negate(add1)(5);", "validation": "assert(negate(add1)(5) === -6);", "context":    ""} } </grader_payload>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoidmFyIGFkZDEgPSBmdW5jdGlvbiAoeCkge1xuICAgIHJldHVybiB4ICsgMTtcbn07XG5cbnZhciBuZWdhdGUgPSBmdW5jdGlvbihmdW5jKSB7XG4gICAgLy8gVE9ET1xufTtcblxuLy8gU2hvdWxkIHJldHVybiAtNlxuLy8gQmVjYXVzZSAoNSsxKSAqIC0xID0gLTZcbm5lZ2F0ZShhZGQxKSg1KTsiLCJzb2x1dGlvbiI6InZhciBhZGQxID0gZnVuY3Rpb24gKHgpIHtcbiAgICByZXR1cm4geCArIDE7XG59XG5cbnZhciBuZWdhdGUgPSBmdW5jdGlvbihmdW5jKSB7XG4gICAgcmV0dXJuIGZ1bmN0aW9uKHgpIHtcbiAgICAgICAgcmV0dXJuIC0xICogZnVuYyh4KTtcbiAgICB9XG59XG5cbm5lZ2F0ZShhZGQxKSg1KTsiLCJ2YWxpZGF0aW9uIjoiYXNzZXJ0KG5lZ2F0ZShhZGQxKSg1KSA9PT0gLTYpOyIsImNvbnRleHQiOm51bGwsImxhbmciOiJqYXZhc2NyaXB0In0"}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>
