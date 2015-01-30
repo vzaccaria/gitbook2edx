@@ -12,6 +12,7 @@
   "author": "Vittorio Zaccaria",
   "license": "BSD",
   "dependencies": {
+    "base64-url": "^1.2.0",
     "bluebird": "~2.3.11",
     "chalk": "^0.5.1",
     "cssify": "^0.6.0",

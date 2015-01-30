@@ -41,7 +41,9 @@
                 <codeparam>
                     <initial_display>{{vertical.code.base}}</initial_display>
                     <answer_display>{{vertical.code.solution}}</answer_display>
-                    <grader_payload> {"lang": "{{vertical.lang}}", "code": {"base":       "{{vertical.code.base}}", "solution":   "{{vertical.code.solution}}", "validation": "{{vertical.code.validation}}", "context":    "{{vertical.code.context}}"} } </grader_payload>
+                    <grader_payload> 
+                      {{vertical.grader_payload}}
+                    </grader_payload>
                 </codeparam>
                 
             </coderesponse>

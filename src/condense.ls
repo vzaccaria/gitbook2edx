@@ -4,6 +4,7 @@ bluebird = require('bluebird')
 _        = require('lodash')
 debug    = require('debug')(__filename)
 uid      = require('uid')
+b64 = require('base64-url')
 bluebird.promisifyAll(fs)
 
 y = require('js-yaml')
@@ -13,16 +14,19 @@ $ = require('underscore.string')
 escape-section = (d, name) ->
     if d.code?[name]?
         d.code[name] = _.escape(d.code[name])
-        d.code[name] = d.code[name].replace(/--/g, '')
 
 
 escape-code-sections = (data) ->
     for d in data.sections
         d.url-name = uid(8)
-        escape-section(d, 'solution')
-        escape-section(d, 'base')
-        escape-section(d, 'validation')
-        escape-section(d, 'context')
+        if d.code?
+            d.code.lang = d.lang
+            d.grader_payload = {
+                payload: b64.encode(JSON.stringify(d.code))
+            }
+            d.grader_payload = JSON.stringify(d.grader_payload)
+            escape-section(d, 'base')
+            escape-section(d, 'solution')
     return data
 
 
