@@ -25,9 +25,68 @@
           <script type='text/javascript' src='/static/client.js' />
          
          <h1 id="learn-javascript">Learn Javascript</h1>
-<p>This book will teach you the basics of programming and Javascript. Whether you are an experienced programmer or not, this book is intended for everyone who wishes to learn the JavaScript programming language.</p>
-<p>JavaScript (<em>JS for short</em>) is the programming language that enables web pages to respond to user interaction beyond the basic level. It was created in 1995, and is today one of the most famous and used programming languages.</p>
-<p><strong>Note:</strong> This book has been generated using <a href="http://www.gitbook.io" target="_blank">GitBook</a> and is open source, feel free to contribute or signal issues on <a href="https://github.com/GitbookIO/javascript" target="_blank">GitHub</a>. You can download a <strong>PDF</strong> or <strong>ePUB</strong> version at <a href="https://www.gitbook.io/book/GitBookIO/javascript" target="_blank">https://www.gitbook.io/book/GitBookIO/javascript</a>.</p>
+<p>This book will teach you the basics of programming and Javascript.
+Whether you are an experienced programmer or not, this book is intended
+for everyone who wishes to learn the JavaScript programming language.</p>
+<p>JavaScript (<em>JS for short</em>) is the programming language that enables web
+pages to respond to user interaction beyond the basic level. It was
+created in 1995, and is today one of the most famous and used
+programming languages.</p>
+
+        </html> 
+      </vertical>
+       
+
+        
+
+
+     
+
+       
+
+      
+      <vertical display_name="Introduction - Step 2" >
+        <problem display_name="Introduction - Step 2">
+            <text>
+                <p>Questo è un quiz</p>
+
+            </text>
+
+            <coderesponse queuename="extgrad-zaccaria-com">
+                <textbox rows="10" cols="80" mode="quiz" tabsize="4" />
+                <codeparam>
+                    <initial_display>Pippo
+Pluto
+Paperino</initial_display>
+                    <answer_display>Pippo</answer_display>
+                    <grader_payload> 
+                      {"payload":"eyJiYXNlIjoiUGlwcG9cblBsdXRvXG5QYXBlcmlubyIsInNvbHV0aW9uIjoiUGlwcG8iLCJ2YWxpZGF0aW9uIjoiRmVlZGJhY2siLCJjb250ZXh0IjpudWxsLCJsYW5nIjoicXVpeiJ9"}
+                    </grader_payload>
+                </codeparam>
+                
+            </coderesponse>
+           
+
+        </problem>
+      </vertical>
+
+        
+
+
+     
+
+      
+      <vertical display_name="Introduction - Step 3" >
+        <html display_name="Introduction - Step 3">
+
+          <script type='text/javascript' src='/static/client.js' />
+         
+         <p><strong>Note:</strong> This book has been generated using
+<a href="http://www.gitbook.io" target="_blank">GitBook</a> and is open source, feel free to
+contribute or signal issues on
+<a href="https://github.com/GitbookIO/javascript" target="_blank">GitHub</a>. You can download a
+<strong>PDF</strong> or <strong>ePUB</strong> version at
+<a href="https://www.gitbook.io/book/GitBookIO/javascript" target="_blank">https://www.gitbook.io/book/GitBookIO/javascript</a>.</p>
 
         </html> 
       </vertical>
