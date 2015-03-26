@@ -1,8 +1,8 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 set -e
 
 usage="
-Usage: 
+Usage:
     test [ -d | --dry ] [ -n | --noclean ]
 
 Options:
@@ -15,10 +15,10 @@ Description:
 
 
 # Absolute path:
-# 
+#
 # Usage: abs=`get_abs_path ./deploy/static`
 #		 echo $abs
-# 
+#
 function get_abs_path {
    dir=$(cd `dirname $1` >/dev/null; pwd )
    echo $dir
@@ -62,8 +62,8 @@ function directory_does_exist {
 	fi
 }
 
-bold=$(tput bold)
-reset=$(tput sgr0)
+bold=""
+reset=""
 function print_important_message {
 	printf "${bold}$1${reset}. "
 }
@@ -71,7 +71,7 @@ function print_important_message {
 function ask_for_key {
 	printf "Press [enter] to continue"
 	read -s # suppress user input
-	echo 
+	echo
 }
 
 
@@ -106,14 +106,18 @@ while (($# > 0)) ; do
 done
 
 gbtdir="$dstdir/tmp-gitbook-test"
+ref="$srcdir/../test/test-ref"
+
 run "rm -rf $gbtdir"
 run "mkdir $gbtdir"
 run "cp -R $srcdir/../test/javascript-master $gbtdir/source"
 run "cd $gbtdir && $srcdir/../bin/gitbook2edx gen source"
-run "< $gbtdir/_course/course.xml sed 's/url_name=\"[^\"]*\"//g' > $gbtdir/_course/course-clean.xml "
-run "diff-files $srcdir/../test/test-ref/course-clean.xml  $gbtdir/_course/course-clean.xml                                      -m 'Testing course.xml   '"
-run "diff-files $srcdir/../test/test-ref/about/overview.html  $gbtdir/_course/about/overview.html                    -m 'Testing overview.html'"
-run "diff-files $srcdir/../test/test-ref/about/short_description.html $gbtdir/_course/about/short_description.html   -m 'Testing short descr. '"
+run "< $gbtdir/_course/course.xml sed -f $srcdir/filter.sed > $gbtdir/_course/course-clean.xml "
+run "diff-files $ref/course-clean.xml  $gbtdir/_course/course-clean.xml                                      -m 'Testing course.xml   '"
+run "diff-files $ref/about/overview.html  $gbtdir/_course/about/overview.html                    -m 'Testing overview.html'"
+run "diff-files $ref/about/short_description.html $gbtdir/_course/about/short_description.html   -m 'Testing short descr. '"
+echo "gvimdiff $gbtdir/_course/course-clean.xml $ref/course-clean.xml"
+run "diff $gbtdir/_course/course-clean.xml $ref/course-clean.xml"
 if [[ $clean == true ]]; then
     run "rm -rf $gbtdir"
 fi

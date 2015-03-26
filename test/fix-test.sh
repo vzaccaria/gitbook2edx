@@ -1,9 +1,9 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 set -e
 
 usage="
-Usage: 
-    fix-test [ -d | --dry ] 
+Usage:
+    fix-test [ -d | --dry ]
 
 Options:
     -d, --dry       Dont execute commands.
@@ -14,10 +14,10 @@ Description:
 
 
 # Absolute path:
-# 
+#
 # Usage: abs=`get_abs_path ./deploy/static`
 #		 echo $abs
-# 
+#
 function get_abs_path {
    dir=$(cd `dirname $1` >/dev/null; pwd )
    echo $dir
@@ -61,8 +61,8 @@ function directory_does_exist {
 	fi
 }
 
-bold=$(tput bold)
-reset=$(tput sgr0)
+bold=""
+reset=""
 function print_important_message {
 	printf "${bold}$1${reset}. "
 }
@@ -70,7 +70,7 @@ function print_important_message {
 function ask_for_key {
 	printf "Press [enter] to continue"
 	read -s # suppress user input
-	echo 
+	echo
 }
 
 
