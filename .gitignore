@@ -2,7 +2,6 @@ _course
 _build
 .build
 Dockerfile
-
 course.tar.gz
 makefile
 tmp-gitbook-test
