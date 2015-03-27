@@ -15,7 +15,12 @@
  
   <chapter display_name="Introduction" >
   
-    <sequential display_name="Introduction"  >
+    <sequential display_name="Introduction" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -108,9 +113,14 @@ contribute or signal issues on
   
   </chapter>
  
-  <chapter display_name="Basics" >
+  <chapter display_name="Basics"  start='2015-01-07T23:00:00.000Z' >
   
-    <sequential display_name="Basics"  >
+    <sequential display_name="Basics" 
+       start='2015-01-07T23:00:00.000Z' 
+      graded="false"
+      
+    >
+
      
 
       
@@ -143,7 +153,12 @@ contribute or signal issues on
      
     </sequential>
   
-    <sequential display_name="Comments"  >
+    <sequential display_name="Comments" 
+       start='2015-01-14T23:00:00.000Z' 
+      graded="true"
+       format="Homework" 
+    >
+
      
 
       
@@ -184,37 +199,49 @@ it will be ignored by the interpreter
       
 
       
+
+      
       <vertical display_name="Comments - Step 2" >
         <problem display_name="Comments - Step 2">
-            <text>
-                <p>Mi arracomando !!!!!</p>
+            <p>Mi arracomando !!!!!</p>
 
-            </text>
-
-            <coderesponse queuename="extgrad-zaccaria-com">
-                <textbox rows="10" cols="80" mode="javascript" tabsize="4" />
-                <codeparam>
-                    <initial_display>Forse ci siamo?</initial_display>
-                    <answer_display>/* Mark me as a comment */</answer_display>
-                    <grader_payload>
-                      {"payload":"eyJiYXNlIjoiRm9yc2UgY2kgc2lhbW8_Iiwic29sdXRpb24iOiIvKiBNYXJrIG1lIGFzIGEgY29tbWVudCAqLyIsInZhbGlkYXRpb24iOiJhc3NlcnQodHJ1ZSk7IiwiY29udGV4dCI6bnVsbCwibGFuZyI6ImphdmFzY3JpcHQifQ"}
-                    </grader_payload>
-                </codeparam>
-
-            </coderesponse>
-
+  <choiceresponse>
+    <checkboxgroup label="">
+      
+      <choice correct="true">
+        <text>Pippo</text>
+      </choice>
+      
+      <choice correct="false">
+        <text>Pluto</text>
+      </choice>
+      
+      <choice correct="false">
+        <text>Paperino</text>
+      </choice>
+      
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Feedback</p>
+      <p>Feedback</p>
+    </div>
+  </solution>
 
         </problem>
       </vertical>
-
-      
-
       
 
      
     </sequential>
   
-    <sequential display_name="Variables"  >
+    <sequential display_name="Variables" 
+       start='2015-01-21T23:00:00.000Z' 
+      graded="false"
+      
+    >
+
      
 
       
@@ -257,7 +284,12 @@ y = 5
      
     </sequential>
   
-    <sequential display_name="Types"  >
+    <sequential display_name="Types" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -335,7 +367,12 @@ y = 5
      
     </sequential>
   
-    <sequential display_name="Equality"  >
+    <sequential display_name="Equality" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -371,7 +408,12 @@ y = 5
  
   <chapter display_name="Numbers" >
   
-    <sequential display_name="Numbers"  >
+    <sequential display_name="Numbers" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -395,7 +437,12 @@ y = 5
      
     </sequential>
   
-    <sequential display_name="Creation"  >
+    <sequential display_name="Creation" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -462,7 +509,12 @@ var y = a;</answer_display>
      
     </sequential>
   
-    <sequential display_name="Basic Operators"  >
+    <sequential display_name="Basic Operators" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -534,7 +586,12 @@ var x = ((a + b) / c) * d;</answer_display>
      
     </sequential>
   
-    <sequential display_name="Advanced Operators"  >
+    <sequential display_name="Advanced Operators" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -610,7 +667,12 @@ var c = (--x) % 3;</answer_display>
  
   <chapter display_name="Strings" >
   
-    <sequential display_name="Strings"  >
+    <sequential display_name="Strings" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -637,7 +699,12 @@ var c = (--x) % 3;</answer_display>
      
     </sequential>
   
-    <sequential display_name="Creation"  >
+    <sequential display_name="Creation" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -703,7 +770,12 @@ var c = (--x) % 3;</answer_display>
      
     </sequential>
   
-    <sequential display_name="Concatenation"  >
+    <sequential display_name="Concatenation" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -766,7 +838,12 @@ var fullName = firstName + &quot; &quot; + lastName;</answer_display>
      
     </sequential>
   
-    <sequential display_name="Length"  >
+    <sequential display_name="Length" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -833,7 +910,12 @@ var size = str.length;</answer_display>
  
   <chapter display_name="Conditional Logic" >
   
-    <sequential display_name="Conditional Logic"  >
+    <sequential display_name="Conditional Logic" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -859,7 +941,12 @@ var size = str.length;</answer_display>
      
     </sequential>
   
-    <sequential display_name="If"  >
+    <sequential display_name="If" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -950,7 +1037,12 @@ if (name === &quot;John&quot;) {
      
     </sequential>
   
-    <sequential display_name="Else"  >
+    <sequential display_name="Else" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1034,7 +1126,12 @@ if (name === &quot;John&quot;) {
      
     </sequential>
   
-    <sequential display_name="Comparators"  >
+    <sequential display_name="Comparators" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1131,7 +1228,12 @@ if (x &gt; 5) {
      
     </sequential>
   
-    <sequential display_name="Concatenate"  >
+    <sequential display_name="Concatenate" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1218,7 +1320,12 @@ if (name === &quot;John&quot; || country === &quot;England&quot;) {
  
   <chapter display_name="Arrays" >
   
-    <sequential display_name="Arrays"  >
+    <sequential display_name="Arrays" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1246,7 +1353,12 @@ if (name === &quot;John&quot; || country === &quot;England&quot;) {
      
     </sequential>
   
-    <sequential display_name="Indices"  >
+    <sequential display_name="Indices" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1317,7 +1429,12 @@ var mazda = cars[0];</answer_display>
      
     </sequential>
   
-    <sequential display_name="Length"  >
+    <sequential display_name="Length" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1385,7 +1502,12 @@ var a = 6;</answer_display>
  
   <chapter display_name="Loops" >
   
-    <sequential display_name="Loops"  >
+    <sequential display_name="Loops" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1420,7 +1542,12 @@ doThing(cars[<span class="hljs-number">4</span>]);
      
     </sequential>
   
-    <sequential display_name="For"  >
+    <sequential display_name="For" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1490,7 +1617,12 @@ for(var i = 0; i &lt; 100; i++){
      
     </sequential>
   
-    <sequential display_name="While"  >
+    <sequential display_name="While" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1572,7 +1704,12 @@ while (message.length &lt; 100) {
  
   <chapter display_name="Functions" >
   
-    <sequential display_name="Functions"  >
+    <sequential display_name="Functions" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1596,7 +1733,12 @@ while (message.length &lt; 100) {
      
     </sequential>
   
-    <sequential display_name="Declare"  >
+    <sequential display_name="Declare" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1669,7 +1811,12 @@ while (message.length &lt; 100) {
      
     </sequential>
   
-    <sequential display_name="Higher order"  >
+    <sequential display_name="Higher order" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1820,7 +1967,12 @@ negate(add1)(5);</answer_display>
  
   <chapter display_name="Objects" >
   
-    <sequential display_name="Objects"  >
+    <sequential display_name="Objects" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1844,7 +1996,12 @@ negate(add1)(5);</answer_display>
      
     </sequential>
   
-    <sequential display_name="Creation"  >
+    <sequential display_name="Creation" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1884,7 +2041,12 @@ negate(add1)(5);</answer_display>
      
     </sequential>
   
-    <sequential display_name="Properties"  >
+    <sequential display_name="Properties" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1936,7 +2098,12 @@ language[<span class="hljs-string">'newProperty'</span>] = <span class="hljs-str
      
     </sequential>
   
-    <sequential display_name="Mutable"  >
+    <sequential display_name="Mutable" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -1966,7 +2133,12 @@ language[<span class="hljs-string">'newProperty'</span>] = <span class="hljs-str
      
     </sequential>
   
-    <sequential display_name="Reference"  >
+    <sequential display_name="Reference" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -2005,7 +2177,12 @@ a = b = c = {};
      
     </sequential>
   
-    <sequential display_name="Prototype"  >
+    <sequential display_name="Prototype" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -2057,7 +2234,12 @@ child.age = <span class="hljs-number">8</span>;
      
     </sequential>
   
-    <sequential display_name="Delete"  >
+    <sequential display_name="Delete" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -2091,7 +2273,12 @@ Removing a property from an object may allow a property from the prototype chain
      
     </sequential>
   
-    <sequential display_name="Enumeration"  >
+    <sequential display_name="Enumeration" 
+      
+      graded="false"
+      
+    >
+
      
 
       
@@ -2131,7 +2318,12 @@ sentence = sentence.substr(<span class="hljs-number">0</span>,sentence.length-<s
      
     </sequential>
   
-    <sequential display_name="Global footprint"  >
+    <sequential display_name="Global footprint" 
+      
+      graded="false"
+      
+    >
+
      
 
       

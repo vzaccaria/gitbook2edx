@@ -1,14 +1,42 @@
-glob     = require('glob')
-fs       = require('fs')
-promise = require('bluebird')
-_        = require('lodash')
-debug    = require('debug')(__filename)
-uid      = require('uid')
-b64 = require('base64-url')
-y = require('js-yaml')
-$ = require('underscore.string')
+glob      = require('glob')
+fs        = require('fs')
+promise   = require('bluebird')
+_         = require('lodash')
+debug     = require('debug')(__filename)
+uid       = require('uid')
+b64       = require('base64-url')
+y         = require('js-yaml')
+$         = require('underscore.string')
 { process-code } = require('./code/process-code')
 
+moment    = require('moment')
+
+parseTitle = (title) ->
+  matches = (title == /[^\{]*\{([^\}]*)\}/)
+  if matches
+    debug(matches[1])
+    format = undefined
+
+    values = matches[1].split(',')
+
+    if "HW" in values
+      format := "Homework"
+    if "EX" in values
+      format := "Exam"
+
+    graded = "HW" in values || "EX" in values
+
+    week = _.compact _.map values, ->
+      m = (it == /W(\d+)/)
+      if m
+        return m[1]
+      else
+        null
+
+    title = title.replace(/\s*\{[^\}]*\}/, '')
+    start = week[0]
+    return { graded, start, title, format }
+  return { graded: false, title: title }
 
 promise.promisifyAll(fs)
 
@@ -59,9 +87,15 @@ _module = ->
                   sequential.section = parseInt(matches[2]) if matches[2]?
                   sequential.section ?= 0
 
+                  { graded, title, start, format } = parseTitle(sequential.title)
+                  sequential.title = title
+                  sequential.start = moment(metadata.course.start).add(start, 'week').format("YYYY MM DD") if start?
+                  sequential.format = format if format?
+                  sequential.graded = graded
                   sequential.displayName = sequential.title
                   sequential.name = $.slugify(sequential.displayName)
                   sequential.urlName = sequential.name+"-#{uid(8)}"
+                  debug sequential if start?
                   return sequential
             else
                 return undefined
@@ -73,6 +107,7 @@ _module = ->
 
             grouped = _.map grouped, ->
                 it.displayName = it[0].displayName
+                it.start = it[0].start
                 it.urlName = "#{it[0].urlName}-#{uid(8)}"
                 return it
 

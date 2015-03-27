@@ -14,8 +14,9 @@ General help
 
     Usage:
     gitbook2edx gen DIR [ -c CONFIG ]
+    gitbook2edx json DIR [ -c CONFIG ]
     gitbook2edx info DIR [ -c CONFIG ]
-    gitbook2edx -h | --help 
+    gitbook2edx -h | --help
 
 Options:
     -h, --help              Just this help
@@ -26,8 +27,6 @@ Arguments:
 
 Commands:
     gen                     Generate the `course.tar.gz` file for the gitbook in DIR.
-
-
 
 
 Detailed help

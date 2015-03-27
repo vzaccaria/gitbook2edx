@@ -27,17 +27,19 @@ var a = "this is a variable defined in a statement";
 Mi arracomando !!!!!
 
 
-
-```js
-Forse ci siamo?
+``` quiz
+Pippo
+Pluto
+Paperino
 ```
 
-```js
-/* Mark me as a comment */
+``` quiz
+Pippo
 ```
 
-```js
-assert(true);
+``` quiz
+Feedback
 ```
+
 
 ---

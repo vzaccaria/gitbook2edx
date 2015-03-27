@@ -13,9 +13,14 @@
  >
 
  {% for chapter in chapters %}
-  <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
+  <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}"{% if chapter.start %} start='{{chapter.start | datejs }}' {% endif %}>
   {% for sequential in chapter %}
-    <sequential display_name="{{sequential.displayName}}" url_name="{{sequential.urlName}}" >
+    <sequential display_name="{{sequential.displayName}}" url_name="{{sequential.urlName}}"
+      {% if sequential.start %} start='{{sequential.start | datejs }}' {% endif %}
+      graded="{{sequential.graded}}"
+      {% if sequential.format %} format="{{sequential.format}}" {% endif %}
+    >
+
      {% for vertical in sequential.verticals %}
 
       {% if vertical.type == 'normal' %}
