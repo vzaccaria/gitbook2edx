@@ -33,6 +33,7 @@ parse ->
                 @make "exec"
                 @make "build-assets"
                 @cmd "./test/test.sh -n"
+                @cmd "./node_modules/.bin/verb"
                 @cmd "./bin/gitbook2edx info test/javascript-master"
                 ]
 
@@ -48,7 +49,6 @@ parse ->
         @collect "release-#l", -> [
           @command-seq -> [
             @cmd "make all"
-            @cmd "./node_modules/.bin/verb"
             @cmd "./node_modules/.bin/xyz --increment #l"
           ]
         ]
