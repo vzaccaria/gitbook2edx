@@ -10,6 +10,7 @@
   </choiceresponse>
   <solution>
     <div class="detailed-solution">
+      <p>Feedback</p>
       <p>{{feedback}}</p>
     </div>
   </solution>
