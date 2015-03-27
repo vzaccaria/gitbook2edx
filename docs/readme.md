@@ -1,68 +1,88 @@
-# {%= name %} {%= badge("fury") %}
+{%= name %} {%= badge("fury") %}
+================================
 
 > {%= description %}
 
 {%= include("install-global") %}
 
-## General help 
+General help
+------------
 
-```
-{%= partial("usage.md") %}
-```
+    {%= partial("usage.md") %}
 
-## Detailed help
+Detailed help
+-------------
 
-This command generates an archive with all the XML/HTML files needed to bootstrap an Edx course based on a Gitbook. The following mappings are used
+**Warning**: This command assumes a Gitbook 1.5.0 (or lower) format for
+your book.
 
-- Gitbook section -> Edx Chapter
-- Gitbook subsection -> Edx Sequential (plus one Edx Vertical for the content)
+This command generates an archive with all the XML/HTML files needed to
+bootstrap an Edx course based on a Gitbook. The following mappings are
+used
 
-At the moment, only HTML is included in `course.xml`. In the future we plan to convert also Gitbook exercises.
+-   Gitbook section -\> Edx Chapter
+-   Gitbook subsection -\> Edx Sequential (plus one Edx Vertical for the
+    content)
 
-A part from `course.xml`, the archive will contain an `about` folder with the required `overview.html` and `short_description.html`. Static data, such as the course image and the js/css assets will be included in the `static` subfolder.
+At the moment, only HTML is included in `course.xml`. In the future we
+plan to convert also Gitbook exercises.
+
+A part from `course.xml`, the archive will contain an `about` folder
+with the required `overview.html` and `short_description.html`. Static
+data, such as the course image and the js/css assets will be included in
+the `static` subfolder.
 
 ### Prerequisites
 
-To generate the course archive (`course.tar.gz`), the following information is needed:
+To generate the course archive (`course.tar.gz`), the following
+information is needed:
 
-* the root directory (`DIR`) of the Gitbook to be imported
-* the YAML configuration file (`CONFIG`) for the course. This one specifies the metadata information of the course such as start and end times, course description, teacher's bios. By default, this command looks for a `config.yaml` file in `DIR`. You can specify another value through the command line.
-* Optional: one `js` and one `css` file to be included as static assets in each vertical. 
+-   the root directory (`DIR`) of the Gitbook to be imported
+-   the YAML configuration file (`CONFIG`) for the course. This one
+    specifies the metadata information of the course such as start and
+    end times, course description, teacher's bios. By default, this
+    command looks for a `config.yaml` file in `DIR`. You can specify
+    another value through the command line.
+-   Optional: one `js` and one `css` file to be included as static
+    assets in each vertical.
 
 ### Example
 
-To generate `course.tar.gz` for a Gitbook in `test/javascript-master` (assuming the configuration is `test/javascript-master/config.yaml`): 
+To generate `course.tar.gz` for a Gitbook in `test/javascript-master`
+(assuming the configuration is `test/javascript-master/config.yaml`):
 
     gitbook2edx gen test/javascript-master
 
-
 ### Configuration file
-Here you can find the configuration file `config.yaml` that shows the mandatory information needed in the `config.yaml` file:
 
-```yaml
+Here you can find the configuration file `config.yaml` that shows the
+mandatory information needed in the `config.yaml` file:
+
+``` yaml
 ---
-course: 
+course:
     name: 'Computer Science'
     number: '80169'
 
     # The following two get concatenated to obtain the url_name
     year: '2014'
-    season: 'spring' 
-organization: 
+    season: 'spring'
+organization:
     name: 'EXAMPLE-ORGNAME'
 ```
 
-while all the available configuration options for the course are shown here:
+while all the available configuration options for the course are shown
+here:
 
-```yaml
+``` yaml
 ---
-course: 
+course:
     name: 'Computer Science'
     number: '80169'
 
     # The following two get concatenated to obtain the url_name
     year: '2014'
-    season: 'spring' 
+    season: 'spring'
 
     # Important dates (use JS's native Date parsing)
     start: 'March 1, 2015 8:00'
@@ -74,7 +94,7 @@ course:
     # This is always relative to the 'DIR/_assets' directory
     image: 'course-image.jpg'
 
-organization: 
+organization:
     name: 'EXAMPLE-ORGNAME'
 
 assets:
@@ -90,13 +110,13 @@ info:
     prerequisites: |
         You can use **markdown** here
 
-    course-staff: 
+    course-staff:
 
-      - name: 'John Doe' 
+      - name: 'John Doe'
         image: 'http://www.dropbox.com/u/3989328983232y/image.jpg'
         bio: 'xlkxz xz lxzlk'
 
-    faq: 
+    faq:
       - question: 'Silly question?'
         answer: 'yes'
 
@@ -104,14 +124,16 @@ short-description: |
     150 characters of course description.
 ```
 
+Author
+------
 
-## Author
 {%= include("author") %}
 
-## License
-{%= copyright() %}
-{%= license() %}
+License
+-------
 
-***
+{%= copyright() %} {%= license() %}
+
+------------------------------------------------------------------------
 
 {%= include("footer") %}

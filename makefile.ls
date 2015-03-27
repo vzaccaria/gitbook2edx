@@ -1,4 +1,4 @@
-#!/usr/bin/env lsc 
+#!/usr/bin/env lsc
 
 { parse, add-plugin } = require('newmake')
 
@@ -11,16 +11,16 @@ parse ->
 
     @collect "build", -> [
             @toDir 'bin', { strip: 'src' }, -> [
-                @livescript './src/*.ls'
+                @livescript './src/**/*.ls'
                 ]
             ]
 
-    @collect "build-assets", -> 
+    @collect "build-assets", ->
         @dest ("./static/client.js"),  ->
                 @minifyjs ->
                        @bfy "./assets/client.ls", "./assets/**/*.{ls,js,css}"
 
-    @collect "exec", -> 
+    @collect "exec", ->
         @command-seq -> [
             @cmd "echo '#!/usr/bin/env node' > ./bin/gitbook2edx"
             @cmd "cat ./bin/index.js >> ./bin/gitbook2edx"
@@ -48,8 +48,3 @@ parse ->
         @collect "release-#l", -> [
             @cmd "./node_modules/.bin/xyz --increment #l"
         ]
-
-
-
-        
-

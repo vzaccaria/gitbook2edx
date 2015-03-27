@@ -1,34 +1,34 @@
 glob     = require('glob')
 fs       = require('fs')
-bluebird = require('bluebird')
+promise = require('bluebird')
 _        = require('lodash')
 debug    = require('debug')(__filename)
 uid      = require('uid')
 b64 = require('base64-url')
-bluebird.promisifyAll(fs)
-
 y = require('js-yaml')
-
 $ = require('underscore.string')
+{ process-code } = require('./code/process-code')
+
+
+promise.promisifyAll(fs)
 
 escape-section = (d, name) ->
     if d.code?[name]?
         d.code[name] = _.escape(d.code[name])
 
-
-escape-code-sections = (data) ->
-    for d in data.sections
+get-verticals = (data) ->
+    return promise.map data.sections, (d) ->
         d.url-name = uid(8)
-        if d.code?
-            d.code.lang = d.lang
-            d.grader_payload = {
-                payload: b64.encode(JSON.stringify(d.code))
-            }
-            d.grader_payload = JSON.stringify(d.grader_payload)
-            escape-section(d, 'base')
-            escape-section(d, 'solution')
-    return data
-
+        return process-code(d).then (d) ->
+          if d.code?
+              d.code.lang = d.lang
+              d.grader_payload = {
+                  payload: b64.encode(JSON.stringify(d.code))
+              }
+              d.grader_payload = JSON.stringify(d.grader_payload)
+              escape-section(d, 'base')
+              escape-section(d, 'solution')
+          return d
 
 _module = ->
 
@@ -45,24 +45,25 @@ _module = ->
         files = glob.sync("#directory/**/*.json")
         promised_files = [ fs.readFileAsync(f, 'utf-8') for f in files ]
 
-        bluebird.all(promised_files).map ->
+        promise.all(promised_files).map ->
             data = JSON.parse(it)
             level = data.progress.current.level
             matches = (level == /(\d)+.?(\d)*/)
             if matches
-                sequential = {
-                    chapter: parseInt(matches[1])
-                    title: data.progress.current.title
-                    verticals: escape-code-sections(data).sections
-                }
-                sequential.section = parseInt(matches[2]) if matches[2]?
-                sequential.section ?= 0
+                return get-verticals(data).then (verticals) ->
+                  sequential = {
+                      chapter: parseInt(matches[1])
+                      title: data.progress.current.title
+                      verticals: verticals
+                  }
+                  sequential.section = parseInt(matches[2]) if matches[2]?
+                  sequential.section ?= 0
 
-                sequential.displayName = sequential.title
-                sequential.name = $.slugify(sequential.displayName)
-                sequential.urlName = sequential.name+"-#{uid(8)}"
-                return sequential 
-            else 
+                  sequential.displayName = sequential.title
+                  sequential.name = $.slugify(sequential.displayName)
+                  sequential.urlName = sequential.name+"-#{uid(8)}"
+                  return sequential
+            else
                 return undefined
         .then ->
             grouped = _.groupBy(it, 'chapter')
@@ -84,6 +85,3 @@ _module = ->
     }
 
 module.exports = _module()
-
-
-
