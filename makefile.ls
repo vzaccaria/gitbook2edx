@@ -46,5 +46,9 @@ parse ->
     for l in ["major", "minor", "patch"]
 
         @collect "release-#l", -> [
+          @command-seq -> [
+            @cmd "make all"
+            @cmd "./node_modules/.bin/verb"
             @cmd "./node_modules/.bin/xyz --increment #l"
+          ]
         ]
