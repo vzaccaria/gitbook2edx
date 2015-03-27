@@ -1,6 +1,6 @@
-<course 
- url_name="{{course.year}}-{{course.season}}" 
- org="{{organization.name}}" 
+<course
+ url_name="{{course.year}}-{{course.season}}"
+ org="{{organization.name}}"
  course="{{course.name}}"
  display_name="{{course.displayName}}"
 
@@ -9,9 +9,9 @@
  {% if course.enrollment_start %} enrollment_start="{{course.enrollment_start | datejs }}" {% endif %}
  {% if course.enrollment_end %} enrollment_end="{{course.enrollment_end | datejs }}" {% endif %}
  {% if course.image %} course_image="{{course.image}}" {% endif %}
- 
+
  >
- 
+
  {% for chapter in chapters %}
   <chapter display_name="{{chapter.displayName}}" url_name="{{chapter.urlName}}">
   {% for sequential in chapter %}
@@ -23,11 +23,11 @@
         <html display_name="{{sequential.displayName}} - Step {{forloop.index}}">
 
           <script type='text/javascript' src='/static/client.js' />
-         
+
          {{vertical.content}}
-        </html> 
+        </html>
       </vertical>
-      {% endif %} 
+      {% endif %}
 
       {% if vertical.type == 'exercise' %}
       <vertical display_name="{{sequential.displayName}} - Step {{forloop.index}}" url_name="{{vertical.urlName}}">
@@ -41,23 +41,30 @@
                 <codeparam>
                     <initial_display>{{vertical.code.base}}</initial_display>
                     <answer_display>{{vertical.code.solution}}</answer_display>
-                    <grader_payload> 
+                    <grader_payload>
                       {{vertical.grader_payload}}
                     </grader_payload>
                 </codeparam>
-                
+
             </coderesponse>
-           
+
 
         </problem>
       </vertical>
 
-      {% endif %}  
+      {% endif %}
 
+      {% if vertical.type == 'plugin' %}
+      <vertical display_name="{{sequential.displayName}} - Step {{forloop.index}}" url_name="{{vertical.urlName}}">
+        <problem display_name="{{sequential.displayName}} - Step {{forloop.index}}">
+          {{vertical.content}}
+        </problem>
+      </vertical>
+      {% endif %}
 
-     {% endfor %} 
+     {% endfor %}
     </sequential>
-  {% endfor %}      
+  {% endfor %}
   </chapter>
  {% endfor %}
 </course>

@@ -1,0 +1,15 @@
+  {{question}}
+  <choiceresponse>
+    <checkboxgroup label="">
+      {% for i in items %}
+      <choice correct="{{i.correct}}">
+        <text>{{i.text}}</text>
+      </choice>
+      {% endfor %}
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>{{feedback}}</p>
+    </div>
+  </solution>
