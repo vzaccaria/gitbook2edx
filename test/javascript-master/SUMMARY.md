@@ -5,7 +5,7 @@ Summary
     -   [Comments {HW,W2}](basics/comments.md)
     -   [Variables {W3}](basics/variables.md)
     -   [Types](basics/types.md)
-    -   [Equality](basics/equality.md)
+    -   [Equality {HW}](basics/equality.md)
 -   [Numbers](numbers/README.md)
     -   [Creation](numbers/create.md)
     -   [Basic Operators](numbers/operators.md)

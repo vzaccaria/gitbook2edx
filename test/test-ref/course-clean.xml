@@ -173,12 +173,15 @@ contribute or signal issues on
 <ul>
 <li>Line starting with <code>//</code>:</li>
 </ul>
+<!-- -->
 <pre><code class="lang-javascript"><span class="hljs-comment">// This is a comment, it will be ignored by the interpreter</span>
 <span class="hljs-keyword">var</span> a = <span class="hljs-string">"this is a variable defined in a statement"</span>;
 </code></pre>
 <ul>
-<li>Section of code starting with <code>/*</code>and ending with <code>*/</code>, this method is used for multi-line comments:</li>
+<li>Section of code starting with <code>/*</code>and ending with <code>*/</code>, this method
+is used for multi-line comments:</li>
 </ul>
+<!-- -->
 <pre><code class="lang-javascript"><span class="hljs-comment">/*
 This is a multi-line comment,
 it will be ignored by the interpreter
@@ -369,8 +372,8 @@ y = 5
   
     <sequential display_name="Equality" 
       
-      graded="false"
-      
+      graded="true"
+       format="Homework" 
     >
 
      
@@ -382,16 +385,28 @@ y = 5
           <script type='text/javascript' src='/static/client.js' />
 
          <h1 id="equality">Equality</h1>
-<p>Programmers frequently need to determine the equality of variables in relation to other variables. This is done using an equality operator.</p>
-<p>The most basic equality operator is the <code>==</code> operator. This operator does everything it can to determine if two variables are equal, even if they are not of the same type. </p>
+<p>Programmers frequently need to determine the equality of variables in
+relation to other variables. This is done using an equality operator.</p>
+<p>The most basic equality operator is the <code>==</code> operator. This operator
+does everything it can to determine if two variables are equal, even if
+they are not of the same type.</p>
 <p>For example, assume:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> foo = <span class="hljs-number">42</span>;
 <span class="hljs-keyword">var</span> bar = <span class="hljs-number">42</span>;
 <span class="hljs-keyword">var</span> baz = <span class="hljs-string">"42"</span>;
 <span class="hljs-keyword">var</span> qux = <span class="hljs-string">"life"</span>;
 </code></pre>
-<p><code>foo == bar</code> will evaluate to <code>true</code> and <code>baz == qux</code> will evaluate to <code>false</code>, as one would expect. However, <code>foo == baz</code> will <em>also</em> evaluate to <code>true</code> despite <code>foo</code> and <code>baz</code> being different types. Behind the scenes the <code>==</code> equality operator attempts to force its operands to the same type before determining their equality. This is in contrast to the <code>===</code> equality operator.</p>
-<p>The <code>===</code> equality operator determines that two variables are equal if they are of the same type <em>and</em> have the same value. With the same assumptions as before, this means that <code>foo === bar</code> will still evaluate to <code>true</code>,  but <code>foo === baz</code> will now evaluate to <code>false</code>. <code>baz === qux</code> will still evaluate to <code>false</code>.</p>
+<p><code>foo == bar</code> will evaluate to <code>true</code> and <code>baz == qux</code> will evaluate to
+<code>false</code>, as one would expect. However, <code>foo == baz</code> will <em>also</em> evaluate
+to <code>true</code> despite <code>foo</code> and <code>baz</code> being different types. Behind the
+scenes the <code>==</code> equality operator attempts to force its operands to the
+same type before determining their equality. This is in contrast to the
+<code>===</code> equality operator.</p>
+<p>The <code>===</code> equality operator determines that two variables are equal if
+they are of the same type <em>and</em> have the same value. With the same
+assumptions as before, this means that <code>foo === bar</code> will still evaluate
+to <code>true</code>, but <code>foo === baz</code> will now evaluate to <code>false</code>. <code>baz === qux</code>
+will still evaluate to <code>false</code>.</p>
 
         </html>
       </vertical>
@@ -399,6 +414,45 @@ y = 5
 
       
 
+      
+
+     
+
+      
+
+      
+
+      
+      <vertical display_name="Equality - Step 2" >
+        <problem display_name="Equality - Step 2">
+            <p>Mi arracomando2 !!!!!</p>
+
+  <choiceresponse>
+    <checkboxgroup label="">
+      
+      <choice correct="false">
+        <text>Pippo</text>
+      </choice>
+      
+      <choice correct="true">
+        <text>Pluto</text>
+      </choice>
+      
+      <choice correct="false">
+        <text>Paperino</text>
+      </choice>
+      
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Feedback</p>
+      <p>another feedback</p>
+    </div>
+  </solution>
+
+        </problem>
+      </vertical>
       
 
      
