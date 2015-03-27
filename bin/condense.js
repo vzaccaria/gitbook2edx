@@ -22,10 +22,16 @@
       if (in$("HW", values)) {
         format = "Homework";
       }
-      if (in$("EX", values)) {
-        format = "Exam";
+      if (in$("LB", values)) {
+        format = "Lab";
       }
-      graded = in$("HW", values) || in$("EX", values);
+      if (in$("MX", values)) {
+        format = "Midterm Exam";
+      }
+      if (in$("FX", values)) {
+        format = "Final Exam";
+      }
+      graded = format != null;
       week = _.compact(_.map(values, function(it){
         var m;
         m = /W(\d+)/.exec(it);

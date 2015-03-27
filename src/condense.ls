@@ -21,10 +21,17 @@ parseTitle = (title) ->
 
     if "HW" in values
       format := "Homework"
-    if "EX" in values
-      format := "Exam"
 
-    graded = "HW" in values || "EX" in values
+    if "LB" in values
+      format := "Lab"
+
+    if "MX" in values
+      format := "Midterm Exam"
+
+    if "FX" in values
+      format := "Final Exam"
+
+    graded = format?
 
     week = _.compact _.map values, ->
       m = (it == /W(\d+)/)
