@@ -147,11 +147,7 @@ short-description: |
 Author
 ------
 
-
-**Vittorio Zaccaria**
- 
-+ [github/vzaccaria](https://github.com/vzaccaria)
-+ [twitter/vzaccaria](http://twitter.com/vzaccaria) 
+* Vittorio Zaccaria
 
 License
 -------

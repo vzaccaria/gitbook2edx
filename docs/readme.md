@@ -127,7 +127,7 @@ short-description: |
 Author
 ------
 
-{%= include("author") %}
+* Vittorio Zaccaria
 
 License
 -------
