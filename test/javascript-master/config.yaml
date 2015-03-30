@@ -1,9 +1,9 @@
 ---
 
-organization: 
+organization:
     name:   'testx'
-    
-course: 
+
+course:
     name:   'Javascript fundamentals'
     number: '8888'
     year:   '2014'
@@ -17,7 +17,16 @@ course:
     start: 'January 1, 2015 8:00'
     end: 'June 3, 2015'
 
+grading:
+    GRADE_CUTOFFS:
+      - pass: 0.6
 
+    GRADER:
+      - min_count: 3
+        weight: 1
+        type: "Homework"
+        drop_count: 0
+        short_label: "HW"
 
 xqueue:
     name:   'extgrad-zaccaria-com'
@@ -30,21 +39,21 @@ info:
     prerequisites: |
       # These are the prerequisites
 
-    course-staff: 
+    course-staff:
 
-      - name: 'Vittorio Zaccaria' 
+      - name: 'Vittorio Zaccaria'
         image: 'http://www.vittoriozaccaria.net/v2/img/profile_pic_1_res.jpg'
         bio: 'xlkxz xz lxzlk'
 
-      - name: 'Vittorio2 Zaccaria' 
+      - name: 'Vittorio2 Zaccaria'
         image: 'http://www.vittoriozaccaria.net/v2/img/profile_pic_1_res.jpg'
         bio: 'xlkxz xz lxzlk'
 
-    faq: 
+    faq:
       - question: 'q1'
         answer: 'aq2'
 
 short-description: |
-    # Informatica B 
-    
+    # Informatica B
+
     Questo e` Il corso di informatica B!

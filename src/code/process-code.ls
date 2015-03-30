@@ -13,6 +13,7 @@ process-code = (d) ->
     if d.lang? && (d.lang in _.keys(plugins))
       resolve(plugins[d.lang](d))
     else
+      d.exercise = true
       resolve(d)
 
 

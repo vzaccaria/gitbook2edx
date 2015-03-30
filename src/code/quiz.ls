@@ -15,11 +15,12 @@ module.exports = (section) ->
     section.feedback = section.code.validation
     section.items = _.map section.choices, ->
       { text: it, correct: (it in section.solutions) }
-    t.render(section).then (rendered) ->
+    return t.render(section).then (rendered) ->
       section.type = "plugin"
       section.content = rendered
       delete section.code
       delete section.lang
+      section.exercise = true
       return section
 
 # Quiz section shoul be an object:

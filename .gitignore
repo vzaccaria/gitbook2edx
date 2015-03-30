@@ -5,4 +5,8 @@ Dockerfile
 course.tar.gz
 makefile
 tmp-gitbook-test
-bin
+bin/*.js
+bin/build.js
+bin/code
+bin/condense.js
+bin/write.js

@@ -11,28 +11,19 @@ $         = require('underscore.string')
 
 moment    = require('moment')
 
-parseTitle = (title) ->
+parseTitle = (title, data) ->
   matches = (title == /[^\{]*\{([^\}]*)\}/)
   if matches
     debug(matches[1])
-    format = undefined
 
-    values = matches[1].split(',')
+    values    = matches[1].split(',')
 
-    if "HW" in values
-      format := "Homework"
+    exercises = _.reject(values, -> (it == /W(\d+)/)?)
 
-    if "LB" in values
-      format := "Lab"
-
-    if "MX" in values
-      format := "Midterm Exam"
-
-    if "FX" in values
-      format := "Final Exam"
+    format    = _.first(_.filter data.grading.GRADER, ->
+        it.short_label == exercises[0])?.type
 
     graded = format?
-
     week = _.compact _.map values, ->
       m = (it == /W(\d+)/)
       if m
@@ -71,6 +62,7 @@ _module = ->
         metadata = y.safeLoad(fs.readFileSync(config, 'utf-8'))
 
         metadata.course.orig-dir = source-dir
+        metadata.course.urlName = "#{metadata.course.year}-#{metadata.course.season}"
         metadata.course.displayName = metadata.course.name
         metadata.course.name = $.slugify( metadata.course.number )
 
@@ -94,7 +86,7 @@ _module = ->
                   sequential.section = parseInt(matches[2]) if matches[2]?
                   sequential.section ?= 0
 
-                  { graded, title, start, format } = parseTitle(sequential.title)
+                  { graded, title, start, format } = parseTitle(sequential.title, metadata)
                   sequential.title = title
                   sequential.start = moment(metadata.course.start).add(start, 'week').format("YYYY MM DD") if start?
                   sequential.format = format if format?
@@ -111,6 +103,20 @@ _module = ->
             grouped = [ v for k,v of grouped ]
             grouped = [ _.sortBy(v, 'section') for v in grouped ]
 
+            _.map _.filter(_.flatten(grouped), (.graded)), ->
+              it.exercises = (_.countBy(it.verticals, (.exercise == true)))['true'] || 0
+              return it
+
+            metadata.exercises = _.mapValues _.groupBy(_.filter(_.flatten(grouped), (.graded)), (.format)), ->
+                 _.reduce it, ((sum, n) ->
+                   sum + n.exercises), 0
+
+            for d in metadata.grading.GRADER
+              if d.type in _.keys(metadata.exercises)
+                  d.min_count = metadata.exercises[d.type]
+              else
+                 d.min_count = 0
+                 d.drop_count = 0
 
             grouped = _.map grouped, ->
                 it.displayName = it[0].displayName
@@ -119,6 +125,7 @@ _module = ->
                 return it
 
             debug("All data gathered into a single structure")
+
 
             return _.extend(metadata, { chapters: grouped })
 

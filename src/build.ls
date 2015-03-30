@@ -1,7 +1,7 @@
 
 require! 'fs'
 debug = require('debug')(__filename)
-
+promise = require('bluebird')
 marked = require('marked')
 
 files = {
@@ -37,6 +37,7 @@ _module = ->
         output = {}
         for k,v of files
             output[k] := engine.parseAndRender(v, data)
+        output["/#{data.course.urlName}/grading_policy.json"] = promise.resolve(JSON.stringify(data.grading, 0, 4))
         return { metadata: data, files: output }
 
     return {

@@ -1,5 +1,5 @@
 <course
- url_name="{{course.year}}-{{course.season}}"
+ url_name="{{course.urlName}}"
  org="{{organization.name}}"
  course="{{course.name}}"
  display_name="{{course.displayName}}"

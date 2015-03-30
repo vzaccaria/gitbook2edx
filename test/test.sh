@@ -52,7 +52,6 @@ srcdir=`cd $srcdir; pwd`
 #
 # or current:
 #
-dstdir=`pwd`
 
 function directory_does_exist {
 	if [ ! -d "$1" ]; then
@@ -105,7 +104,7 @@ while (($# > 0)) ; do
   esac
 done
 
-gbtdir="$dstdir/tmp-gitbook-test"
+gbtdir="$srcdir/tmp-gitbook-test"
 ref="$srcdir/../test/test-ref"
 
 run "rm -rf $gbtdir"
@@ -113,9 +112,13 @@ run "mkdir $gbtdir"
 run "cp -R $srcdir/../test/javascript-master $gbtdir/source"
 run "cd $gbtdir && $srcdir/../bin/gitbook2edx gen source"
 run "< $gbtdir/_course/course.xml sed -f $srcdir/filter.sed > $gbtdir/_course/course-clean.xml "
-run "diff-files $ref/course-clean.xml  $gbtdir/_course/course-clean.xml                                      -m 'Testing course.xml   '"
-run "diff-files $ref/about/overview.html  $gbtdir/_course/about/overview.html                    -m 'Testing overview.html'"
-run "diff-files $ref/about/short_description.html $gbtdir/_course/about/short_description.html   -m 'Testing short descr. '"
+
+run "diff-files $ref/course-clean.xml                 $gbtdir/_course/course-clean.xml                  -m 'Testing course.xml   '"
+run "diff-files $ref/about/overview.html              $gbtdir/_course/about/overview.html               -m 'Testing overview.html'"
+run "diff-files $ref/about/short_description.html     $gbtdir/_course/about/short_description.html      -m 'Testing short descr. '"
+run "diff-files $ref/2014-spring/grading_policy.json  $gbtdir/_course/2014-spring/grading_policy.json   -m 'Testing grading policy descr. '"
+
+echo "gvimdiff $ref/about/short_description.html $gbtdir/_course/about/short_description.html"
 echo "gvimdiff $gbtdir/_course/course-clean.xml $ref/course-clean.xml"
 run "diff $gbtdir/_course/course-clean.xml $ref/course-clean.xml"
 if [[ $clean == true ]]; then

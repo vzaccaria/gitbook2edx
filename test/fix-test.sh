@@ -103,5 +103,7 @@ while (($# > 0)) ; do
   esac
 done
 
-gbtdir="$dstdir/tmp-gitbook-test"
+gbtdir="$srcdir/tmp-gitbook-test"
+run "$srcdir/test.sh -n"
+echo "Copying cp: $gbtdir/_course/course-clean.xml $srcdir/../test/test-ref/course-clean.xml"
 run "cp $gbtdir/_course/course-clean.xml $srcdir/../test/test-ref/course-clean.xml"
