@@ -116,7 +116,9 @@ run "< $gbtdir/_course/course.xml sed -f $srcdir/filter.sed > $gbtdir/_course/co
 run "diff-files $ref/course-clean.xml                 $gbtdir/_course/course-clean.xml                  -m 'Testing course.xml   '"
 run "diff-files $ref/about/overview.html              $gbtdir/_course/about/overview.html               -m 'Testing overview.html'"
 run "diff-files $ref/about/short_description.html     $gbtdir/_course/about/short_description.html      -m 'Testing short descr. '"
-run "diff-files $ref/2014-spring/grading_policy.json  $gbtdir/_course/2014-spring/grading_policy.json   -m 'Testing grading policy descr. '"
+run "diff-files $ref/policies/2014-spring/grading_policy.json  $gbtdir/_course/policies/2014-spring/grading_policy.json   -m 'Testing grading policy descr. '"
+
+run "diff $ref/policies/2014-spring/grading_policy.json  $gbtdir/_course/policies/2014-spring/grading_policy.json"
 
 echo "gvimdiff $ref/about/short_description.html $gbtdir/_course/about/short_description.html"
 echo "gvimdiff $gbtdir/_course/course-clean.xml $ref/course-clean.xml"

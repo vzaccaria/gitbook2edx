@@ -19,7 +19,7 @@ course:
 
 grading:
     GRADE_CUTOFFS:
-      - pass: 0.6
+      pass: 0.6
 
     GRADER:
       - min_count: 3
