@@ -1,0 +1,739 @@
+{
+    "progress": {
+        "prevPercent": 72.22222222222223,
+        "percent": 75,
+        "chapters": [
+            {
+                "title": "Introduction",
+                "prev": null,
+                "next": {
+                    "title": "Basics {W1}",
+                    "level": "1",
+                    "path": "basics/README.md"
+                },
+                "level": "0",
+                "path": "README.md",
+                "percent": 0,
+                "done": true
+            },
+            {
+                "title": "Basics {W1}",
+                "prev": {
+                    "title": "Introduction",
+                    "level": "0",
+                    "path": "README.md"
+                },
+                "next": {
+                    "title": "Comments {HW,W2}",
+                    "level": "1.1",
+                    "path": "basics/comments.md"
+                },
+                "level": "1",
+                "path": "basics/README.md",
+                "percent": 2.7777777777777777,
+                "done": true
+            },
+            {
+                "title": "Comments {HW,W2}",
+                "prev": {
+                    "title": "Basics {W1}",
+                    "level": "1",
+                    "path": "basics/README.md"
+                },
+                "next": {
+                    "title": "Variables {W3}",
+                    "level": "1.2",
+                    "path": "basics/variables.md"
+                },
+                "level": "1.1",
+                "path": "basics/comments.md",
+                "percent": 5.555555555555555,
+                "done": true
+            },
+            {
+                "title": "Variables {W3}",
+                "prev": {
+                    "title": "Comments {HW,W2}",
+                    "level": "1.1",
+                    "path": "basics/comments.md"
+                },
+                "next": {
+                    "title": "Types",
+                    "level": "1.3",
+                    "path": "basics/types.md"
+                },
+                "level": "1.2",
+                "path": "basics/variables.md",
+                "percent": 8.333333333333334,
+                "done": true
+            },
+            {
+                "title": "Types",
+                "prev": {
+                    "title": "Variables {W3}",
+                    "level": "1.2",
+                    "path": "basics/variables.md"
+                },
+                "next": {
+                    "title": "Equality {HW}",
+                    "level": "1.4",
+                    "path": "basics/equality.md"
+                },
+                "level": "1.3",
+                "path": "basics/types.md",
+                "percent": 11.11111111111111,
+                "done": true
+            },
+            {
+                "title": "Equality {HW}",
+                "prev": {
+                    "title": "Types",
+                    "level": "1.3",
+                    "path": "basics/types.md"
+                },
+                "next": {
+                    "title": "Numbers {LAB}",
+                    "level": "2",
+                    "path": "numbers/README.md"
+                },
+                "level": "1.4",
+                "path": "basics/equality.md",
+                "percent": 13.88888888888889,
+                "done": true
+            },
+            {
+                "title": "Numbers {LAB}",
+                "prev": {
+                    "title": "Equality {HW}",
+                    "level": "1.4",
+                    "path": "basics/equality.md"
+                },
+                "next": {
+                    "title": "Creation",
+                    "level": "2.1",
+                    "path": "numbers/create.md"
+                },
+                "level": "2",
+                "path": "numbers/README.md",
+                "percent": 16.666666666666668,
+                "done": true
+            },
+            {
+                "title": "Creation",
+                "prev": {
+                    "title": "Numbers {LAB}",
+                    "level": "2",
+                    "path": "numbers/README.md"
+                },
+                "next": {
+                    "title": "Basic Operators",
+                    "level": "2.2",
+                    "path": "numbers/operators.md"
+                },
+                "level": "2.1",
+                "path": "numbers/create.md",
+                "percent": 19.444444444444443,
+                "done": true
+            },
+            {
+                "title": "Basic Operators",
+                "prev": {
+                    "title": "Creation",
+                    "level": "2.1",
+                    "path": "numbers/create.md"
+                },
+                "next": {
+                    "title": "Advanced Operators",
+                    "level": "2.3",
+                    "path": "numbers/advanced.md"
+                },
+                "level": "2.2",
+                "path": "numbers/operators.md",
+                "percent": 22.22222222222222,
+                "done": true
+            },
+            {
+                "title": "Advanced Operators",
+                "prev": {
+                    "title": "Basic Operators",
+                    "level": "2.2",
+                    "path": "numbers/operators.md"
+                },
+                "next": {
+                    "title": "Strings",
+                    "level": "3",
+                    "path": "strings/README.md"
+                },
+                "level": "2.3",
+                "path": "numbers/advanced.md",
+                "percent": 25,
+                "done": true
+            },
+            {
+                "title": "Strings",
+                "prev": {
+                    "title": "Advanced Operators",
+                    "level": "2.3",
+                    "path": "numbers/advanced.md"
+                },
+                "next": {
+                    "title": "Creation",
+                    "level": "3.1",
+                    "path": "strings/create.md"
+                },
+                "level": "3",
+                "path": "strings/README.md",
+                "percent": 27.77777777777778,
+                "done": true
+            },
+            {
+                "title": "Creation",
+                "prev": {
+                    "title": "Strings",
+                    "level": "3",
+                    "path": "strings/README.md"
+                },
+                "next": {
+                    "title": "Concatenation",
+                    "level": "3.2",
+                    "path": "strings/concat.md"
+                },
+                "level": "3.1",
+                "path": "strings/create.md",
+                "percent": 30.555555555555557,
+                "done": true
+            },
+            {
+                "title": "Concatenation",
+                "prev": {
+                    "title": "Creation",
+                    "level": "3.1",
+                    "path": "strings/create.md"
+                },
+                "next": {
+                    "title": "Length",
+                    "level": "3.3",
+                    "path": "strings/length.md"
+                },
+                "level": "3.2",
+                "path": "strings/concat.md",
+                "percent": 33.333333333333336,
+                "done": true
+            },
+            {
+                "title": "Length",
+                "prev": {
+                    "title": "Concatenation",
+                    "level": "3.2",
+                    "path": "strings/concat.md"
+                },
+                "next": {
+                    "title": "Conditional Logic",
+                    "level": "4",
+                    "path": "conditional/README.md"
+                },
+                "level": "3.3",
+                "path": "strings/length.md",
+                "percent": 36.111111111111114,
+                "done": true
+            },
+            {
+                "title": "Conditional Logic",
+                "prev": {
+                    "title": "Length",
+                    "level": "3.3",
+                    "path": "strings/length.md"
+                },
+                "next": {
+                    "title": "If",
+                    "level": "4.1",
+                    "path": "conditional/if.md"
+                },
+                "level": "4",
+                "path": "conditional/README.md",
+                "percent": 38.888888888888886,
+                "done": true
+            },
+            {
+                "title": "If",
+                "prev": {
+                    "title": "Conditional Logic",
+                    "level": "4",
+                    "path": "conditional/README.md"
+                },
+                "next": {
+                    "title": "Else",
+                    "level": "4.2",
+                    "path": "conditional/else.md"
+                },
+                "level": "4.1",
+                "path": "conditional/if.md",
+                "percent": 41.666666666666664,
+                "done": true
+            },
+            {
+                "title": "Else",
+                "prev": {
+                    "title": "If",
+                    "level": "4.1",
+                    "path": "conditional/if.md"
+                },
+                "next": {
+                    "title": "Comparators",
+                    "level": "4.3",
+                    "path": "conditional/comparators.md"
+                },
+                "level": "4.2",
+                "path": "conditional/else.md",
+                "percent": 44.44444444444444,
+                "done": true
+            },
+            {
+                "title": "Comparators",
+                "prev": {
+                    "title": "Else",
+                    "level": "4.2",
+                    "path": "conditional/else.md"
+                },
+                "next": {
+                    "title": "Concatenate",
+                    "level": "4.4",
+                    "path": "conditional/concatenate.md"
+                },
+                "level": "4.3",
+                "path": "conditional/comparators.md",
+                "percent": 47.22222222222222,
+                "done": true
+            },
+            {
+                "title": "Concatenate",
+                "prev": {
+                    "title": "Comparators",
+                    "level": "4.3",
+                    "path": "conditional/comparators.md"
+                },
+                "next": {
+                    "title": "Arrays",
+                    "level": "5",
+                    "path": "arrays/README.md"
+                },
+                "level": "4.4",
+                "path": "conditional/concatenate.md",
+                "percent": 50,
+                "done": true
+            },
+            {
+                "title": "Arrays",
+                "prev": {
+                    "title": "Concatenate",
+                    "level": "4.4",
+                    "path": "conditional/concatenate.md"
+                },
+                "next": {
+                    "title": "Indices",
+                    "level": "5.1",
+                    "path": "arrays/indices.md"
+                },
+                "level": "5",
+                "path": "arrays/README.md",
+                "percent": 52.77777777777778,
+                "done": true
+            },
+            {
+                "title": "Indices",
+                "prev": {
+                    "title": "Arrays",
+                    "level": "5",
+                    "path": "arrays/README.md"
+                },
+                "next": {
+                    "title": "Length",
+                    "level": "5.2",
+                    "path": "arrays/length.md"
+                },
+                "level": "5.1",
+                "path": "arrays/indices.md",
+                "percent": 55.55555555555556,
+                "done": true
+            },
+            {
+                "title": "Length",
+                "prev": {
+                    "title": "Indices",
+                    "level": "5.1",
+                    "path": "arrays/indices.md"
+                },
+                "next": {
+                    "title": "Loops",
+                    "level": "6",
+                    "path": "loops/README.md"
+                },
+                "level": "5.2",
+                "path": "arrays/length.md",
+                "percent": 58.333333333333336,
+                "done": true
+            },
+            {
+                "title": "Loops",
+                "prev": {
+                    "title": "Length",
+                    "level": "5.2",
+                    "path": "arrays/length.md"
+                },
+                "next": {
+                    "title": "For",
+                    "level": "6.1",
+                    "path": "loops/for.md"
+                },
+                "level": "6",
+                "path": "loops/README.md",
+                "percent": 61.111111111111114,
+                "done": true
+            },
+            {
+                "title": "For",
+                "prev": {
+                    "title": "Loops",
+                    "level": "6",
+                    "path": "loops/README.md"
+                },
+                "next": {
+                    "title": "While",
+                    "level": "6.2",
+                    "path": "loops/while.md"
+                },
+                "level": "6.1",
+                "path": "loops/for.md",
+                "percent": 63.888888888888886,
+                "done": true
+            },
+            {
+                "title": "While",
+                "prev": {
+                    "title": "For",
+                    "level": "6.1",
+                    "path": "loops/for.md"
+                },
+                "next": {
+                    "title": "Functions",
+                    "level": "7",
+                    "path": "functions/README.md"
+                },
+                "level": "6.2",
+                "path": "loops/while.md",
+                "percent": 66.66666666666667,
+                "done": true
+            },
+            {
+                "title": "Functions",
+                "prev": {
+                    "title": "While",
+                    "level": "6.2",
+                    "path": "loops/while.md"
+                },
+                "next": {
+                    "title": "Declare",
+                    "level": "7.1",
+                    "path": "functions/declare.md"
+                },
+                "level": "7",
+                "path": "functions/README.md",
+                "percent": 69.44444444444444,
+                "done": true
+            },
+            {
+                "title": "Declare",
+                "prev": {
+                    "title": "Functions",
+                    "level": "7",
+                    "path": "functions/README.md"
+                },
+                "next": {
+                    "title": "Higher order",
+                    "level": "7.2",
+                    "path": "functions/higher_order.md"
+                },
+                "level": "7.1",
+                "path": "functions/declare.md",
+                "percent": 72.22222222222223,
+                "done": true
+            },
+            {
+                "title": "Higher order",
+                "prev": {
+                    "title": "Declare",
+                    "level": "7.1",
+                    "path": "functions/declare.md"
+                },
+                "next": {
+                    "title": "Objects",
+                    "level": "8",
+                    "path": "objects/README.md"
+                },
+                "level": "7.2",
+                "path": "functions/higher_order.md",
+                "percent": 75,
+                "done": true
+            },
+            {
+                "title": "Objects",
+                "prev": {
+                    "title": "Higher order",
+                    "level": "7.2",
+                    "path": "functions/higher_order.md"
+                },
+                "next": {
+                    "title": "Creation",
+                    "level": "8.1",
+                    "path": "objects/creation.md"
+                },
+                "level": "8",
+                "path": "objects/README.md",
+                "percent": 77.77777777777777,
+                "done": false
+            },
+            {
+                "title": "Creation",
+                "prev": {
+                    "title": "Objects",
+                    "level": "8",
+                    "path": "objects/README.md"
+                },
+                "next": {
+                    "title": "Properties",
+                    "level": "8.2",
+                    "path": "objects/properties.md"
+                },
+                "level": "8.1",
+                "path": "objects/creation.md",
+                "percent": 80.55555555555556,
+                "done": false
+            },
+            {
+                "title": "Properties",
+                "prev": {
+                    "title": "Creation",
+                    "level": "8.1",
+                    "path": "objects/creation.md"
+                },
+                "next": {
+                    "title": "Mutable",
+                    "level": "8.3",
+                    "path": "objects/mutable.md"
+                },
+                "level": "8.2",
+                "path": "objects/properties.md",
+                "percent": 83.33333333333333,
+                "done": false
+            },
+            {
+                "title": "Mutable",
+                "prev": {
+                    "title": "Properties",
+                    "level": "8.2",
+                    "path": "objects/properties.md"
+                },
+                "next": {
+                    "title": "Reference",
+                    "level": "8.4",
+                    "path": "objects/reference.md"
+                },
+                "level": "8.3",
+                "path": "objects/mutable.md",
+                "percent": 86.11111111111111,
+                "done": false
+            },
+            {
+                "title": "Reference",
+                "prev": {
+                    "title": "Mutable",
+                    "level": "8.3",
+                    "path": "objects/mutable.md"
+                },
+                "next": {
+                    "title": "Prototype",
+                    "level": "8.5",
+                    "path": "objects/prototype.md"
+                },
+                "level": "8.4",
+                "path": "objects/reference.md",
+                "percent": 88.88888888888889,
+                "done": false
+            },
+            {
+                "title": "Prototype",
+                "prev": {
+                    "title": "Reference",
+                    "level": "8.4",
+                    "path": "objects/reference.md"
+                },
+                "next": {
+                    "title": "Delete",
+                    "level": "8.6",
+                    "path": "objects/delete.md"
+                },
+                "level": "8.5",
+                "path": "objects/prototype.md",
+                "percent": 91.66666666666667,
+                "done": false
+            },
+            {
+                "title": "Delete",
+                "prev": {
+                    "title": "Prototype",
+                    "level": "8.5",
+                    "path": "objects/prototype.md"
+                },
+                "next": {
+                    "title": "Enumeration",
+                    "level": "8.7",
+                    "path": "objects/enumeration.md"
+                },
+                "level": "8.6",
+                "path": "objects/delete.md",
+                "percent": 94.44444444444444,
+                "done": false
+            },
+            {
+                "title": "Enumeration",
+                "prev": {
+                    "title": "Delete",
+                    "level": "8.6",
+                    "path": "objects/delete.md"
+                },
+                "next": {
+                    "title": "Global footprint",
+                    "level": "8.8",
+                    "path": "objects/global_footprint.md"
+                },
+                "level": "8.7",
+                "path": "objects/enumeration.md",
+                "percent": 97.22222222222223,
+                "done": false
+            },
+            {
+                "title": "Global footprint",
+                "prev": {
+                    "title": "Enumeration",
+                    "level": "8.7",
+                    "path": "objects/enumeration.md"
+                },
+                "next": null,
+                "level": "8.8",
+                "path": "objects/global_footprint.md",
+                "percent": 100,
+                "done": false
+            }
+        ],
+        "current": {
+            "title": "Higher order",
+            "prev": {
+                "title": "Declare",
+                "level": "7.1",
+                "path": "functions/declare.md"
+            },
+            "next": {
+                "title": "Objects",
+                "level": "8",
+                "path": "objects/README.md"
+            },
+            "level": "7.2",
+            "path": "functions/higher_order.md",
+            "percent": 75,
+            "done": true
+        }
+    },
+    "lexed": [
+        [
+            {
+                "type": "heading",
+                "depth": 1,
+                "text": "Higher Order Functions"
+            },
+            {
+                "type": "paragraph",
+                "text": "Higher order functions are functions that manipulate other functions.\nFor example, a function can take other functions as arguments and/or produce a function as its return value.\nSuch *fancy* functional techniques are powerful constructs available to you in JavaScript and other high-level languages like python, lisp, etc."
+            },
+            {
+                "type": "paragraph",
+                "text": "We will now create two simple functions, `add_2` and `double`, and a higher order function called `map`. `map` will accept two arguments, `func` and `list` (its declaration will therefore begin `map(func,list)`), and return an array. `func` (the first argument) will be a function that will be applied to each of the elements in the array `list` (the second argument)."
+            },
+            {
+                "type": "code",
+                "lang": "javascript",
+                "text": "// Define two simple functions\nvar add_2 = function(x) {\n    return x + 2;\n};\nvar double = function(x) {\n    return 2 * x;\n};\n\n// map is cool function that accepts 2 arguments:\n//  func    the function to call\n//  list    a array of values to call func on\nvar map = function(func, list) {\n    var output=[];              // output list\n    for(idx in list) {\n        output.push( func(list[idx]) );\n    }\n    return output;\n}\n\n\n// We use map to apply a function to an entire list\n// of inputs to \"map\" them to a list of corresponding outputs\nmap(add_2, [5,6,7]) // => [7, 8, 9]\nmap(double, [5,6,7]) // => [10, 12, 14]"
+            },
+            {
+                "type": "paragraph",
+                "text": "The functions in the above example are simple. However, when passed as arguments to other functions, they can be composed in unforeseen ways to build more complex functions."
+            },
+            {
+                "type": "paragraph",
+                "text": "For example, if we notice that we use the invocations `map(add_2, ...)` and `map(double, ...)` very often in our code, we could decide we want to create two special-purpose list processing functions that have the desired operation baked into them. Using function composition, we could do this as follows:"
+            },
+            {
+                "type": "code",
+                "lang": "javascript",
+                "text": "process_add_2 = function(list) {\n    return map(add_2, list);\n}\nprocess_double = function(list) {\n    return map(double, list);\n}\nprocess_add_2([5,6,7]) // => [7, 8, 9]\nprocess_double([5,6,7]) // => [10, 12, 14]"
+            },
+            {
+                "type": "paragraph",
+                "text": "Now let's create a function called `buildProcessor` that takes a function `func` as input\nand returns a `func`-processor, that is, a function that applies `func` to each input in list."
+            },
+            {
+                "type": "code",
+                "lang": "javascript",
+                "text": "// a function that generates a list processor that performs\nvar buildProcessor = function(func) {\n    var process_func = function(list) {\n        return map(func, list);\n    }\n    return process_func;\n}\n// calling buildProcessor returns a function which is called with a list input\n\n\n// using buildProcessor we could generate the add_2 and double list processors as follows:\nprocess_add_2 = buildProcessor(add_2);\nprocess_double = buildProcessor(double);\n\nprocess_add_2([5,6,7]) // => [7, 8, 9]\nprocess_double([5,6,7]) // => [10, 12, 14]"
+            },
+            {
+                "type": "paragraph",
+                "text": "Let's look at another example.\nWe'll create a function called `buildMultiplier` that takes a number `x` as input and returns a function that multiplies its argument by `x` :"
+            },
+            {
+                "type": "code",
+                "lang": "javascript",
+                "text": "var buildMultiplier = function(x) {\n    return function(y) {\n        return x * y;\n    }\n}\n\nvar double = buildMultiplier(2);\nvar triple = buildMultiplier(3);\n\ndouble(3); // => 6\ntriple(3); // => 9"
+            }
+        ],
+        [
+            {
+                "type": "paragraph",
+                "text": "Define a function named `negate` that takes `add1` as argument and returns a function, that returns the negation of the value returned by `add1`. (Things get a bit more complicated ;) )"
+            },
+            {
+                "type": "code",
+                "lang": "js",
+                "text": "var add1 = function (x) {\n    return x + 1;\n};\n\nvar negate = function(func) {\n    // TODO\n};\n\n// Should return -6\n// Because (5+1) * -1 = -6\nnegate(add1)(5);"
+            },
+            {
+                "type": "code",
+                "lang": "js",
+                "text": "var add1 = function (x) {\n    return x + 1;\n}\n\nvar negate = function(func) {\n    return function(x) {\n        return -1 * func(x);\n    }\n}\n\nnegate(add1)(5);"
+            },
+            {
+                "type": "code",
+                "lang": "js",
+                "text": "assert(negate(add1)(5) === -6);"
+            }
+        ]
+    ],
+    "sections": [
+        {
+            "id": "gitbook_38",
+            "type": "normal",
+            "content": "<h1 id=\"higher-order-functions\">Higher Order Functions</h1>\n<p>Higher order functions are functions that manipulate other functions.\nFor example, a function can take other functions as arguments and/or produce a function as its return value.\nSuch <em>fancy</em> functional techniques are powerful constructs available to you in JavaScript and other high-level languages like python, lisp, etc.</p>\n<p>We will now create two simple functions, <code>add_2</code> and <code>double</code>, and a higher order function called <code>map</code>. <code>map</code> will accept two arguments, <code>func</code> and <code>list</code> (its declaration will therefore begin <code>map(func,list)</code>), and return an array. <code>func</code> (the first argument) will be a function that will be applied to each of the elements in the array <code>list</code> (the second argument).</p>\n<pre><code class=\"lang-javascript\"><span class=\"hljs-comment\">// Define two simple functions</span>\n<span class=\"hljs-keyword\">var</span> add_2 = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(x)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> x + <span class=\"hljs-number\">2</span>;\n};\n<span class=\"hljs-keyword\">var</span> double = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(x)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-number\">2</span> * x;\n};\n\n<span class=\"hljs-comment\">// map is cool function that accepts 2 arguments:</span>\n<span class=\"hljs-comment\">//  func    the function to call</span>\n<span class=\"hljs-comment\">//  list    a array of values to call func on</span>\n<span class=\"hljs-keyword\">var</span> map = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(func, list)</span> </span>{\n    <span class=\"hljs-keyword\">var</span> output=[];              <span class=\"hljs-comment\">// output list</span>\n    <span class=\"hljs-keyword\">for</span>(idx <span class=\"hljs-keyword\">in</span> list) {\n        output.push( func(list[idx]) );\n    }\n    <span class=\"hljs-keyword\">return</span> output;\n}\n\n\n<span class=\"hljs-comment\">// We use map to apply a function to an entire list</span>\n<span class=\"hljs-comment\">// of inputs to \"map\" them to a list of corresponding outputs</span>\nmap(add_2, [<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [7, 8, 9]</span>\nmap(double, [<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [10, 12, 14]</span>\n</code></pre>\n<p>The functions in the above example are simple. However, when passed as arguments to other functions, they can be composed in unforeseen ways to build more complex functions.</p>\n<p>For example, if we notice that we use the invocations <code>map(add_2, ...)</code> and <code>map(double, ...)</code> very often in our code, we could decide we want to create two special-purpose list processing functions that have the desired operation baked into them. Using function composition, we could do this as follows:</p>\n<pre><code class=\"lang-javascript\">process_add_2 = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(list)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> map(add_2, list);\n}\nprocess_double = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(list)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> map(double, list);\n}\nprocess_add_2([<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [7, 8, 9]</span>\nprocess_double([<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [10, 12, 14]</span>\n</code></pre>\n<p>Now let&#39;s create a function called <code>buildProcessor</code> that takes a function <code>func</code> as input\nand returns a <code>func</code>-processor, that is, a function that applies <code>func</code> to each input in list.</p>\n<pre><code class=\"lang-javascript\"><span class=\"hljs-comment\">// a function that generates a list processor that performs</span>\n<span class=\"hljs-keyword\">var</span> buildProcessor = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(func)</span> </span>{\n    <span class=\"hljs-keyword\">var</span> process_func = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(list)</span> </span>{\n        <span class=\"hljs-keyword\">return</span> map(func, list);\n    }\n    <span class=\"hljs-keyword\">return</span> process_func;\n}\n<span class=\"hljs-comment\">// calling buildProcessor returns a function which is called with a list input</span>\n\n\n<span class=\"hljs-comment\">// using buildProcessor we could generate the add_2 and double list processors as follows:</span>\nprocess_add_2 = buildProcessor(add_2);\nprocess_double = buildProcessor(double);\n\nprocess_add_2([<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [7, 8, 9]</span>\nprocess_double([<span class=\"hljs-number\">5</span>,<span class=\"hljs-number\">6</span>,<span class=\"hljs-number\">7</span>]) <span class=\"hljs-comment\">// =&gt; [10, 12, 14]</span>\n</code></pre>\n<p>Let&#39;s look at another example.\nWe&#39;ll create a function called <code>buildMultiplier</code> that takes a number <code>x</code> as input and returns a function that multiplies its argument by <code>x</code> :</p>\n<pre><code class=\"lang-javascript\"><span class=\"hljs-keyword\">var</span> buildMultiplier = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(x)</span> </span>{\n    <span class=\"hljs-keyword\">return</span> <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(y)</span> </span>{\n        <span class=\"hljs-keyword\">return</span> x * y;\n    }\n}\n\n<span class=\"hljs-keyword\">var</span> double = buildMultiplier(<span class=\"hljs-number\">2</span>);\n<span class=\"hljs-keyword\">var</span> triple = buildMultiplier(<span class=\"hljs-number\">3</span>);\n\ndouble(<span class=\"hljs-number\">3</span>); <span class=\"hljs-comment\">// =&gt; 6</span>\ntriple(<span class=\"hljs-number\">3</span>); <span class=\"hljs-comment\">// =&gt; 9</span>\n</code></pre>\n"
+        },
+        {
+            "id": "gitbook_39",
+            "type": "exercise",
+            "content": "<p>Define a function named <code>negate</code> that takes <code>add1</code> as argument and returns a function, that returns the negation of the value returned by <code>add1</code>. (Things get a bit more complicated ;) )</p>\n",
+            "lang": "javascript",
+            "code": {
+                "base": "var add1 = function (x) {\n    return x + 1;\n};\n\nvar negate = function(func) {\n    // TODO\n};\n\n// Should return -6\n// Because (5+1) * -1 = -6\nnegate(add1)(5);",
+                "solution": "var add1 = function (x) {\n    return x + 1;\n}\n\nvar negate = function(func) {\n    return function(x) {\n        return -1 * func(x);\n    }\n}\n\nnegate(add1)(5);",
+                "validation": "assert(negate(add1)(5) === -6);",
+                "context": null
+            }
+        }
+    ]
+}

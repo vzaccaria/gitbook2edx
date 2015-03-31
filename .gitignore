@@ -11,3 +11,4 @@ bin/code
 bin/condense.js
 bin/write.js
 bin/**/*
+test/test-data.tmp
