@@ -43,6 +43,8 @@ function sanitize(s) {
   s = s.replace(/url_name=\"[^\"]*\"/g, '')
   s = s.replace(/start=\"[^\"]*\"/g, '')
   s = s.replace(/end=\"[^\"]*\"/g, '')
+  s = s.replace(/start=\'[^\']*\'/g, '')
+  s = s.replace(/end=\'[^\']*\'/g, '')
   return s
 }
 
