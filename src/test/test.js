@@ -47,14 +47,18 @@ function sanitize(s) {
 }
 
 var projRoot = `${__dirname}/../..`
-var currentUid = uid(8)
-var currTestDir = `${projRoot}/${currentUid}.tmp`
+var testRoot = `${projRoot}/test/test-ref/_course`
+var currTestDir = `${projRoot}/test/test-data.tmp`
 
+/**
+ * Set of files to be tested
+ * @type {Object}
+ */
 var fileComparison = {
-  "_course/course.xml": "test/test-ref/course-clean.xml",
-  "_course/about/overview.html": "test/test-ref/about/overview.html",
-  "_course/about/short_description.html": "test/test-ref/about/short_description.html",
-  "_course/policies/2014-spring/grading_policy.json": "test/test-ref/policies/2014-spring/grading_policy.json"
+  "_course/course.xml": "course.xml",
+  "_course/about/overview.html": "about/overview.html",
+  "_course/about/short_description.html": "about/short_description.html",
+  "_course/policies/2014-spring/grading_policy.json": "policies/2014-spring/grading_policy.json"
 }
 
 
@@ -62,6 +66,7 @@ var fileComparison = {
 
 before(() => {
   "use strict"
+  rm('-rf', currTestDir)
   mkdir(currTestDir)
   cp('-R', `${projRoot}/test/javascript-master/*`, `${currTestDir}/source`)
   process.chdir(currTestDir)
@@ -96,15 +101,9 @@ _.mapValues(fileComparison, (v, k) => {
 
     it('should be equal to reference', () => {
       var actual = sanitize(cat(`${currTestDir}/${k}`))
-      var ref = sanitize(cat(`${projRoot}/${v}`))
+      var ref = sanitize(cat(`${testRoot}/${v}`))
       actual.should.be.equal(ref)
     })
 
   })
-})
-
-after(() => {
-  "use strict"
-  console.log("Shutting down operations");
-  rm('-rf', currTestDir)
 })

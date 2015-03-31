@@ -13,66 +13,9 @@ Description:
 "
 
 
-# Absolute path:
-#
-# Usage: abs=`get_abs_path ./deploy/static`
-#		 echo $abs
-#
-function get_abs_path {
-   dir=$(cd `dirname $1` >/dev/null; pwd )
-   echo $dir
-}
-#
-
-# Get basename:
-function get_base_name {
-	n=$1
-	n=$(basename "$n")
-	echo "${n%.*}"
-}
-
-
-#if [ $? -eq 0 ]
-#then
-#    echo "it worked"
-#else
-#    echo "it failed"
-#fi
-
-# Source directory
-#
 srcdir=`dirname $0`
 srcdir=`cd $srcdir; pwd`
-
-#
-# Temp directory:
-#
-# dstdir=`mktemp -d -t bashtmp`
-#
-# or current:
-#
 dstdir=`pwd`
-
-function directory_does_exist {
-	if [ ! -d "$1" ]; then
-		echo 'true'
-	else
-		echo 'false'
-	fi
-}
-
-bold=""
-reset=""
-function print_important_message {
-	printf "${bold}$1${reset}. "
-}
-
-function ask_for_key {
-	printf "Press [enter] to continue"
-	read -s # suppress user input
-	echo
-}
-
 
 # dryrun
 dry_run=false
@@ -83,8 +26,6 @@ run() {
     echo "$1"
   fi
 }
-
-clean=true
 
 
 while (($# > 0)) ; do
@@ -103,7 +44,6 @@ while (($# > 0)) ; do
   esac
 done
 
-gbtdir="$srcdir/tmp-gitbook-test"
-run "$srcdir/test.sh -n"
-echo "Copying cp: $gbtdir/_course/course-clean.xml $srcdir/../test/test-ref/course-clean.xml"
-run "cp $gbtdir/_course/course-clean.xml $srcdir/../test/test-ref/course-clean.xml"
+gbtdir="$srcdir/test-data.tmp"
+run "rm -rf $srcdir/test-ref"
+run "mv $gbtdir $srcdir/test-ref"
