@@ -1,4 +1,3 @@
-
 Usage:
     gitbook2edx gen DIR [ -c CONFIG ]
     gitbook2edx json DIR [ -c CONFIG ]

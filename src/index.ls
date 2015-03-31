@@ -15,7 +15,7 @@ doc = shelljs.cat(__dirname+"/../docs/usage.md")
 get-option = (a, b, def, o) ->
     if not o[a] and not o[b]
         return def
-    else 
+    else
         return o[b]
 
 o = docopt(doc)
@@ -32,21 +32,24 @@ if o['json']
         condense(book-dir, source-dir, yaml-config)
     .then ->
         console.log JSON.stringify(it, 0, 4)
+    .catch(-> process.exit(1))
 
-if o['build'] 
+if o['build']
     gitbook(source-dir)
     .then ->
         condense(book-dir, source-dir, yaml-config)
     .then build
     .then ->
         console.log it
+    .catch(-> process.exit(1))
 
-if o['gen'] 
+if o['gen']
     gitbook(source-dir)
     .then ->
         condense(book-dir, source-dir, yaml-config)
     .then build
     .then write
+    .catch(-> process.exit(1))
 
 if o['info']
     gitbook(source-dir)
@@ -57,7 +60,4 @@ if o['info']
         console.log chalk.bold("Organization:  ") + it.organization.name
         console.log chalk.bold("Course number: ") + it.course.number
         console.log chalk.bold("Course run:    ") + it.course.year + "-" + it.course.season
-
-
-
-
+    .catch(-> process.exit(1))    

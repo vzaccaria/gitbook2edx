@@ -9,9 +9,15 @@ parse ->
     @add-plugin \bfy, (g, deps) ->
         @compile-files( (-> "browserify -t cssify -t liveify #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
 
+    @add-plugin \babel, (g, deps) ->
+            @compile-files( (-> "./node_modules/.bin/babel #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
+
     @collect "build", -> [
             @toDir 'bin', { strip: 'src' }, -> [
                 @livescript './src/**/*.ls'
+                ]
+            @toDir 'bin/test', { strip: 'src/test' }, -> [
+                @babel './src/test/**/*.js'
                 ]
             ]
 
@@ -27,12 +33,19 @@ parse ->
             @cmd "chmod +x ./bin/gitbook2edx"
             ]
 
+    @collect "test", -> [
+      #@cmd "./test/test.sh -n"
+      @make "build"
+      @make "exec"
+      @cmd "./node_modules/.bin/mocha -t 3000 ./bin/test/test.js"
+    ]
+
     @collect "all", ->
         @command-seq -> [
                 @make "build"
                 @make "exec"
                 @make "build-assets"
-                @cmd "./test/test.sh -n"
+                @make "test"
                 @cmd "./node_modules/.bin/verb"
                 @cmd "./bin/gitbook2edx info test/javascript-master"
                 ]
