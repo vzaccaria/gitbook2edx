@@ -33,6 +33,11 @@ function exec(cmd) {
   })
 }
 
+/**
+ * Remove time dependent data from input string
+ * @param  {string} s input string
+ * @return {string}   sanitized string
+ */
 function sanitize(s) {
   "use strict"
   s = s.replace(/url_name=\"[^\"]*\"/g, '')
@@ -69,6 +74,10 @@ describe('#command', () => {
   it('should show help', () => {
     var usage = fs.readFileSync(`${projRoot}/docs/usage.md`, 'utf8')
     return exec(`${projRoot}/bin/gitbook2edx -h`).should.eventually.contain(usage)
+  })
+
+  it('should fail when gitbook does not exist', () => {
+    return exec(`${projRoot}/bin/gitbook2edx gen sour`).should.be.rejected
   })
 
   it('should convert an existing gitbook without error', () => {
