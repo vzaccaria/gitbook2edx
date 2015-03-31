@@ -6,7 +6,7 @@
     "gitbook2edx": "./bin/gitbook2edx"
   },
   "scripts": {
-    "test": "./test/test.sh"
+    "test": "make test"
   },
   "keywords": [],
   "author": "Vittorio Zaccaria",
