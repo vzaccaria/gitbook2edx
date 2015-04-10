@@ -14,16 +14,20 @@ _module = ->
             shelljs.rm('-f','./course.tar.gz')
 
             shelljs.mkdir('-p', './_course')
-            shelljs.mkdir('-p', './static')
+            shelljs.mkdir('-p', './_course/static')
 
             for k,v of files
-              shelljs.mkdir('-p', "./_course/#{path.dirname(k)}")
+              if v?
+                shelljs.mkdir('-p', "./_course/#{path.dirname(k)}")
 
             shelljs.cp("#{__dirname}/../static/*", "./_course/static")
 
             for k,v of data
+              if v?
                 debug("Writing #k")
                 v.to("./_course/#k")
+              else
+                debug("Somethings wrong with #{k}, it seems that I was not able to build the file.")
 
             new bluebird (resolve, rej) ->
                 debug 'Packing up with `tar cvzf course.tar.gz _course`'

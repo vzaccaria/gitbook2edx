@@ -32,7 +32,7 @@ if o['json']
         condense(book-dir, source-dir, yaml-config)
     .then ->
         console.log JSON.stringify(it, 0, 4)
-    .catch(-> process.exit(1))
+    .catch(-> console.log it; process.exit(1))
 
 if o['build']
     gitbook(source-dir)
@@ -41,7 +41,7 @@ if o['build']
     .then build
     .then ->
         console.log it
-    .catch(-> process.exit(1))
+    .catch(-> console.log it; process.exit(1))
 
 if o['gen']
     gitbook(source-dir)
@@ -49,7 +49,7 @@ if o['gen']
         condense(book-dir, source-dir, yaml-config)
     .then build
     .then write
-    .catch(-> process.exit(1))
+    .catch(-> console.log it; process.exit(1))
 
 if o['info']
     gitbook(source-dir)
@@ -60,4 +60,4 @@ if o['info']
         console.log chalk.bold("Organization:  ") + it.organization.name
         console.log chalk.bold("Course number: ") + it.course.number
         console.log chalk.bold("Course run:    ") + it.course.year + "-" + it.course.season
-    .catch(-> process.exit(1))    
+    .catch(-> console.log it; process.exit(1))

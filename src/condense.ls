@@ -15,12 +15,14 @@ parseTitle = (title, data) ->
   matches = (title == /[^\{]*\{([^\}]*)\}/)
   if matches
     debug(matches[1])
+    var format
 
     values    = matches[1].split(',')
 
     exercises = _.reject(values, -> (it == /W(\d+)/)?)
 
-    format    = _.first(_.filter data.grading.GRADER, ->
+    if data.grading?.GRADER?
+      format := _.first(_.filter data.grading.GRADER, ->
         it.short_label == exercises[0])?.type
 
     graded = format?
@@ -111,12 +113,13 @@ _module = ->
                  _.reduce it, ((sum, n) ->
                    sum + n.exercises), 0
 
-            for d in metadata.grading.GRADER
-              if d.type in _.keys(metadata.exercises)
-                  d.min_count = metadata.exercises[d.type]
-              else
-                 d.min_count = 0
-                 d.drop_count = 0
+            if metadata.grading?.GRADER?
+              for d in metadata.grading.GRADER
+                if d.type in _.keys(metadata.exercises)
+                    d.min_count = metadata.exercises[d.type]
+                else
+                   d.min_count = 0
+                   d.drop_count = 0
 
             grouped = _.map grouped, ->
                 it.displayName = it[0].displayName

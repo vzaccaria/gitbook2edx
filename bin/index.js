@@ -27,7 +27,8 @@
       return condense(bookDir, sourceDir, yamlConfig);
     }).then(function(it){
       return console.log(JSON.stringify(it, 0, 4));
-    })['catch'](function(){
+    })['catch'](function(it){
+      console.log(it);
       return process.exit(1);
     });
   }
@@ -36,14 +37,16 @@
       return condense(bookDir, sourceDir, yamlConfig);
     }).then(build).then(function(it){
       return console.log(it);
-    })['catch'](function(){
+    })['catch'](function(it){
+      console.log(it);
       return process.exit(1);
     });
   }
   if (o['gen']) {
     gitbook(sourceDir).then(function(){
       return condense(bookDir, sourceDir, yamlConfig);
-    }).then(build).then(write)['catch'](function(){
+    }).then(build).then(write)['catch'](function(it){
+      console.log(it);
       return process.exit(1);
     });
   }
@@ -55,7 +58,8 @@
       console.log(chalk.bold("Organization:  ") + it.organization.name);
       console.log(chalk.bold("Course number: ") + it.course.number);
       return console.log(chalk.bold("Course run:    ") + it.course.year + "-" + it.course.season);
-    })['catch'](function(){
+    })['catch'](function(it){
+      console.log(it);
       return process.exit(1);
     });
   }

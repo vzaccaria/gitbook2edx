@@ -37,7 +37,8 @@ _module = ->
         output = {}
         for k,v of files
             output[k] := engine.parseAndRender(v, data)
-        output["/policies/#{data.course.urlName}/grading_policy.json"] = promise.resolve(JSON.stringify(data.grading, 0, 4))
+        if data.grading?
+          output["/policies/#{data.course.urlName}/grading_policy.json"] = promise.resolve(JSON.stringify(data.grading, 0, 4))
         return { metadata: data, files: output }
 
     return {
