@@ -33,7 +33,8 @@ Detailed help
 -------------
 
 **Warning**: This command assumes a Gitbook 1.5.0 (or lower) format for
-your book.
+your book. I dont plan to follow strictly Gitbook releses, especially
+concerning exercise authoring.
 
 This command generates an archive with all the XML/HTML files needed to
 bootstrap an Edx course based on a Gitbook. The following mappings are
@@ -139,14 +140,83 @@ info:
       - question: 'Silly question?'
         answer: 'yes'
 
-short-description: |
-    150 characters of course description.
+short-description:
+    150 characters of course description.  
 ```
+
+How to write exercises for the book.
+------------------------------------
+
+A programming exercise is defined directly in markdown by writing 4 simple parts between two `----` headers:
+
+-   Exercise Message/Goals (in markdown/text)
+-   Initial code to show to the user, providing a starting point
+-   Solution code, being a correct solution to the exercise
+-   Validation code that tests the correctness of the user's input
+
+e.g:
+
+    ----
+
+    This is an octave exercise
+
+    ``` octave
+    a = 2034547;
+    b = 1.567;
+    c = 6758.768;
+    d = 45084;
+    x =
+    ```
+
+    ``` octave
+    var a = 2034547;
+    var b = 1.567;
+    var c = 6758.768;
+    var d = 45084;
+
+    var x = ((a + b) / c) * d;
+    ```
+
+    ``` octave
+    assert(x == (((a + b) / c) * d));
+    ```
+
+    ----
+
+#### Quizzes
+
+For quizzes the parts change a bit:
+
+-   Exercise Message/Goals (in markdown/text)
+-   All options allowed in the quiz (on separate lines)
+-   All options associated with the solution
+-   Feedback when the user fails to answer
+
+e.g:
+
+    ---
+
+    What is the value of variable `x`
+
+    ``` quiz
+    3
+    1
+    2
+    ```
+
+    ``` quiz
+    1
+    ```
+
+    ``` quiz
+    `x` is the result of 3%2!
+    ```
+    ---
 
 Author
 ------
 
-* Vittorio Zaccaria
+-   Vittorio Zaccaria
 
 License
 -------
