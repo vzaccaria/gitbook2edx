@@ -37,6 +37,7 @@ parse ->
       #@cmd "./test/test.sh -n"
       @make "build"
       @make "exec"
+      #@cmd "cd test/test-data.tmp && DEBUG=* ../../bin/gitbook2edx gen source"
       @cmd "./node_modules/.bin/mocha -t 3000 ./bin/test/test.js"
     ]
 

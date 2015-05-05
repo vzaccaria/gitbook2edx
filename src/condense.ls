@@ -47,6 +47,9 @@ escape-section = (d, name) ->
 get-verticals = (data) ->
     return promise.map data.sections, (d) ->
         d.url-name = uid(8)
+        /*d.content = d.content.replace(/\n/g, '&#xD;&#xA;')*/
+        debug d.content
+
         return process-code(d).then (d) ->
           if d.code?
               d.code.lang = d.lang

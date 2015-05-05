@@ -9,7 +9,6 @@ var fs = require('fs');
 var {
   mkdir, rm, cp, test, cat
 } = require('shelljs')
-var uid = require('uid')
 
 
 /**
@@ -49,7 +48,6 @@ function sanitize(s) {
 }
 
 var projRoot = `${__dirname}/../..`
-var testRoot = `${projRoot}/test/test-ref/_course`
 var currTestDir = `${projRoot}/test/test-data.tmp`
 
 /**
@@ -66,46 +64,67 @@ var fileComparison = {
 
 /*global describe, it, before, beforeEach, after, afterEach */
 
-before(() => {
+var testData = {
+  "jsbook": {
+    src: `${projRoot}/test/javascript-master/*`,
+    ref: `${projRoot}/test/javascript-ref/_course`
+  },
+  "ocbook": {
+    src: `${projRoot}/test/octave-master/*`,
+    ref: `${projRoot}/test/octave-ref/_course`
+  }
+}
+
+var testRoot
+
+/* Updates testRoot */
+var prepareTest = (key) => {
   "use strict"
+  console.log(`Preparing for ${key}`);
   rm('-rf', currTestDir)
   mkdir(currTestDir)
-  cp('-R', `${projRoot}/test/javascript-master/*`, `${currTestDir}/source`)
+  cp('-R', testData[key].src, `${currTestDir}/source`)
   process.chdir(currTestDir)
+  testRoot = testData[key].ref
+}
 
-})
-
-describe('#command', () => {
+_.mapValues(testData, (v, bookType) => {
   "use strict"
 
-  it('should show help', () => {
-    var usage = fs.readFileSync(`${projRoot}/docs/usage.md`, 'utf8')
-    return exec(`${projRoot}/bin/gitbook2edx -h`).should.eventually.contain(usage)
-  })
 
-  it('should fail when gitbook does not exist', () => {
-    return exec(`${projRoot}/bin/gitbook2edx gen sour`).should.be.rejected
-  })
-
-  it('should convert an existing gitbook without error', () => {
-    return exec(`${projRoot}/bin/gitbook2edx gen source`)
-  })
-
-})
-
-_.mapValues(fileComparison, (v, k) => {
-  "use strict"
-  describe(`#${k}`, () => {
-
-    it('should be created', () => {
-      test('-e', `${currTestDir}/${k}`).should.be.equal(true)
+  describe(`#command - ${bookType}`, () => {
+    before(() => {
+      prepareTest(bookType)
     })
 
-    it('should be equal to reference', () => {
-      var actual = sanitize(cat(`${currTestDir}/${k}`))
-      var ref = sanitize(cat(`${testRoot}/${v}`))
-      actual.should.be.equal(ref)
+    it('should show help', () => {
+      var usage = fs.readFileSync(`${projRoot}/docs/usage.md`, 'utf8')
+      return exec(`${projRoot}/bin/gitbook2edx -h`).should.eventually.contain(usage)
     })
 
+    it('should fail when gitbook does not exist', () => {
+      return exec(`${projRoot}/bin/gitbook2edx gen sour`).should.be.rejected
+    })
+
+    it('should convert an existing gitbook without error', () => {
+      return exec(`${projRoot}/bin/gitbook2edx gen source`)
+    })
+
+  })
+
+  _.mapValues(fileComparison, (refFile, outFile) => {
+    if ((bookType === 'jsbook') || (refFile === "course.xml")) {
+      describe(`#${outFile}`, () => {
+        it('should be created', () => {
+          test('-e', `${currTestDir}/${outFile}`).should.be.equal(true)
+        })
+        console.log(refFile);
+        it('should be equal to reference', () => {
+          var actual = sanitize(cat(`${currTestDir}/${outFile}`))
+          var ref = sanitize(cat(`${testRoot}/${refFile}`))
+          actual.should.be.equal(ref)
+        })
+      })
+    }
   })
 })
