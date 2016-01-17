@@ -16,6 +16,7 @@
     "babel": "^4.7.16",
     "base64-url": "^1.2.0",
     "bluebird": "~2.3.11",
+    "browserify": "^13.0.0",
     "chalk": "^0.5.1",
     "cssify": "^0.6.0",
     "date.js": "~0.2.0",

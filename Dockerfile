@@ -10,7 +10,9 @@ RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 COPY . /src
 RUN cat /src/package.json
 RUN cd /src; rm -rf node_modules;
+RUN cd /src; rm -rf bin;
 RUN cd /src; npm install LiveScript@1.3.1;
 RUN cd /src; npm install babel@4.7.16;
 RUN cd /src; npm install;
+RUN cd /src; npm install browserify;
 RUN cd /src; npm test;

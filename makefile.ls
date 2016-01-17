@@ -7,7 +7,7 @@
 parse ->
 
     @add-plugin \bfy, (g, deps) ->
-        @compile-files( (-> "browserify -t cssify -t liveify #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
+        @compile-files( (-> "./node_modules/.bin/browserify -t cssify -t liveify #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
 
     @add-plugin \babel, (g, deps) ->
             @compile-files( (-> "./node_modules/.bin/babel #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
@@ -26,7 +26,6 @@ parse ->
 
     @collect "build-assets", ->
         @dest ("./static/client.js"),  ->
-                @minifyjs ->
                        @bfy "./assets/client.ls", "./assets/**/*.{ls,js,css}"
 
     @collect "exec", ->
