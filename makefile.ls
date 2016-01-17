@@ -12,6 +12,9 @@ parse ->
     @add-plugin \babel, (g, deps) ->
             @compile-files( (-> "./node_modules/.bin/babel #{it.orig-complete} -o #{it.build-target}"), ".js", g, deps)
 
+    @add-plugin \livescript, (g, deps) ->
+            @compile-files( (-> "./node_modules/.bin/lsc -p -c #{it.orig-complete} > #{it.build-target}" ) , ".js", g, deps)
+
     @collect "build", -> [
             @toDir 'bin', { strip: 'src' }, -> [
                 @livescript './src/**/*.ls'
@@ -35,6 +38,7 @@ parse ->
 
     @collect "test", -> [
       #@cmd "./test/test.sh -n"
+      @make "clean"
       @make "build"
       @make "exec"
       #@cmd "cd test/test-data.tmp && DEBUG=* ../../bin/gitbook2edx gen source"
