@@ -10,11 +10,12 @@ RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 RUN mkdir /src
 RUN apt-get install -y git
 
-RUN echo "try n. 4"
+RUN echo "try n. 5"
 RUN git clone https://github.com/vzaccaria/gitbook2edx.git
 RUN cd /gitbook2edx; npm install LiveScript@1.3.1;
 RUN cd /gitbook2edx; npm install babel@4.7.16;
 RUN cd /gitbook2edx; npm install newmake;
 RUN cd /gitbook2edx; npm install;
 RUN cd /gitbook2edx; npm install browserify;
+RUN cd /gitbook2edx; npm install verb verb-cli;
 RUN cd /gitbook2edx; ./node_modules/.bin/lsc ./makefile.ls; make clean; make
