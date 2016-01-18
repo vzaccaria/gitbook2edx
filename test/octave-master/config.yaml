@@ -1,0 +1,16 @@
+---
+
+organization:
+    name:   'polimi'
+
+course:
+    name:   'Introduzione ad Octave'
+    number: '80169'
+    year:   '2015'
+    season: 'fall'
+
+    # in '_assets' directory
+    # image:  'course-image.jpg'
+
+    start: 'October 1, 2015 8:00'
+    end: 'January 30, 2016 8:00'

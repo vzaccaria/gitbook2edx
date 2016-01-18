@@ -1,0 +1,23 @@
+{
+  "name": "gitbook-octave",
+  "version": "1.0.0",
+  "description": "Impariamo Octave ================",
+  "main": "configure.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vzaccaria/gitbook-octave.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vzaccaria/gitbook-octave/issues"
+  },
+  "homepage": "https://github.com/vzaccaria/gitbook-octave",
+  "dependencies": {
+    "diy-build": "^1.0.8",
+    "gitbook2edx": "^0.1.1"
+  }
+}
