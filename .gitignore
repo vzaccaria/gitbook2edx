@@ -1,7 +1,6 @@
 _build
 .build
 makefile
-tmp-gitbook-test
 bin/*
 bin/build.js
 bin/code
