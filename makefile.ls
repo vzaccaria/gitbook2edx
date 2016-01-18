@@ -1,4 +1,4 @@
-#!/usr/bin/env lsc
+#!/usr/bin/env ./node_modules/.bin/lsc
 
 { parse, add-plugin } = require('newmake')
 

@@ -7,12 +7,12 @@ RUN apt-get -qq update
 RUN apt-get install -y nodejs npm
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 # 1 --
-COPY . /src
-RUN cat /src/package.json
-RUN cd /src; rm -rf node_modules;
-RUN cd /src; rm -rf bin;
-RUN cd /src; npm install LiveScript@1.3.1;
-RUN cd /src; npm install babel@4.7.16;
-RUN cd /src; npm install;
-RUN cd /src; npm install browserify;
-RUN cd /src; npm test;
+RUN mkdir /src
+RUN apt-get install -y git
+RUN git clone https://github.com/vzaccaria/gitbook2edx.git
+RUN cd /gitbook2edx; npm install LiveScript@1.3.1;
+RUN cd /gitbook2edx; npm install babel@4.7.16;
+RUN cd /gitbook2edx; npm install newmake;
+RUN cd /gitbook2edx; npm install;
+RUN cd /gitbook2edx; npm install browserify;
+RUN cd /gitbook2edx; ./makefile.ls; make
