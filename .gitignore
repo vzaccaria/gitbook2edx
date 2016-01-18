@@ -1,7 +1,6 @@
 _course
 _build
 .build
-Dockerfile
 course.tar.gz
 makefile
 tmp-gitbook-test
@@ -11,4 +10,3 @@ bin/code
 bin/condense.js
 bin/write.js
 bin/**/*
-test/test-data.tmp

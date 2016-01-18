@@ -1,0 +1,49 @@
+{
+    "progress": {
+        "prevPercent": 0,
+        "percent": 0,
+        "chapters": [
+            {
+                "title": "Introduction",
+                "prev": null,
+                "next": {
+                    "title": "Funzioni",
+                    "level": "1",
+                    "path": "functions/README.md"
+                },
+                "level": "0",
+                "path": "README.md",
+                "percent": 0,
+                "done": true
+            },
+            {
+                "title": "Funzioni",
+                "prev": {
+                    "title": "Introduction",
+                    "level": "0",
+                    "path": "README.md"
+                },
+                "next": null,
+                "level": "1",
+                "path": "functions/README.md",
+                "percent": 100,
+                "done": false
+            }
+        ],
+        "current": {
+            "title": "Introduction",
+            "prev": null,
+            "next": {
+                "title": "Funzioni",
+                "level": "1",
+                "path": "functions/README.md"
+            },
+            "level": "0",
+            "path": "README.md",
+            "percent": 0,
+            "done": true
+        }
+    },
+    "lexed": [],
+    "sections": []
+}

@@ -1,0 +1,73 @@
+{
+    "progress": {
+        "prevPercent": 0,
+        "percent": 100,
+        "chapters": [
+            {
+                "title": "Introduction",
+                "prev": null,
+                "next": {
+                    "title": "Funzioni",
+                    "level": "1",
+                    "path": "functions/README.md"
+                },
+                "level": "0",
+                "path": "README.md",
+                "percent": 0,
+                "done": true
+            },
+            {
+                "title": "Funzioni",
+                "prev": {
+                    "title": "Introduction",
+                    "level": "0",
+                    "path": "README.md"
+                },
+                "next": null,
+                "level": "1",
+                "path": "functions/README.md",
+                "percent": 100,
+                "done": true
+            }
+        ],
+        "current": {
+            "title": "Funzioni",
+            "prev": {
+                "title": "Introduction",
+                "level": "0",
+                "path": "README.md"
+            },
+            "next": null,
+            "level": "1",
+            "path": "functions/README.md",
+            "percent": 100,
+            "done": true
+        }
+    },
+    "lexed": [
+        [
+            {
+                "type": "heading",
+                "depth": 1,
+                "text": "Le funzioni"
+            },
+            {
+                "type": "code",
+                "lang": "matlab",
+                "text": "4*4*4\n12*12*12"
+            },
+            {
+                "type": "code",
+                "lang": "matlab",
+                "text": "\nfunction r = cubo(a)\n  r = a*a*a\nend\n\ncubo(4)\ncubo(12)"
+            }
+        ]
+    ],
+    "sections": [
+        {
+            "id": "gitbook_2",
+            "type": "normal",
+            "content": "<h1 id=\"le-funzioni\">Le funzioni</h1>\n<pre><code class=\"lang-matlab\"><span class=\"hljs-number\">4</span>*<span class=\"hljs-number\">4</span>*<span class=\"hljs-number\">4</span>\n<span class=\"hljs-number\">12</span>*<span class=\"hljs-number\">12</span>*<span class=\"hljs-number\">12</span>\n</code></pre>\n<pre><code class=\"lang-matlab\">\n<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">r</span> = <span class=\"hljs-title\">cubo</span><span class=\"hljs-params\">(a)</span></span>\n  r = a*a*a\n<span class=\"hljs-keyword\">end</span>\n\ncubo(<span class=\"hljs-number\">4</span>)\ncubo(<span class=\"hljs-number\">12</span>)\n</code></pre>\n"
+        }
+    ]
+}
