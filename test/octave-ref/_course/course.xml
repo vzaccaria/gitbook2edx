@@ -1,0 +1,71 @@
+<course
+ url_name="2015-fall"
+ org="polimi"
+ course="80169"
+ display_name="Introduzione ad Octave"
+
+  start="2015-10-01T06:00:00.000Z" 
+  end="2016-01-30T07:00:00.000Z" 
+ 
+ 
+ 
+
+ >
+
+ 
+  <chapter display_name="Introduction" url_name="introduction-8apolmyv-jh7xl8i3">
+  
+    <sequential display_name="Introduction" url_name="introduction-8apolmyv"
+      
+      graded="false"
+      
+    >
+
+     
+    </sequential>
+  
+  </chapter>
+ 
+  <chapter display_name="Funzioni" url_name="funzioni-pj9kv24k-p2p90nas">
+  
+    <sequential display_name="Funzioni" url_name="funzioni-pj9kv24k"
+      
+      graded="false"
+      
+    >
+
+     
+
+      
+      <vertical display_name="Funzioni - Step 1" url_name="mwdrueps">
+        <html display_name="Funzioni - Step 1">
+
+          <script type='text/javascript' src='/static/client.js' />
+
+         <h1 id="le-funzioni">Le funzioni</h1>
+<pre><code class="lang-matlab"><span class="hljs-number">4</span>*<span class="hljs-number">4</span>*<span class="hljs-number">4</span>
+<span class="hljs-number">12</span>*<span class="hljs-number">12</span>*<span class="hljs-number">12</span>
+</code></pre>
+<pre><code class="lang-matlab">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span> = <span class="hljs-title">cubo</span><span class="hljs-params">(a)</span></span>
+  r = a*a*a
+<span class="hljs-keyword">end</span>
+
+cubo(<span class="hljs-number">4</span>)
+cubo(<span class="hljs-number">12</span>)
+</code></pre>
+
+        </html>
+      </vertical>
+      
+
+      
+
+      
+
+     
+    </sequential>
+  
+  </chapter>
+ 
+</course>

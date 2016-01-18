@@ -1,7 +1,5 @@
-_course
 _build
 .build
-course.tar.gz
 makefile
 tmp-gitbook-test
 bin/*

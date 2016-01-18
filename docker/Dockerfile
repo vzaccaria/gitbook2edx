@@ -10,6 +10,7 @@ RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 RUN mkdir /src
 RUN apt-get install -y git
 
+RUN echo "try n. 1"
 RUN git clone https://github.com/vzaccaria/gitbook2edx.git
 RUN cd /gitbook2edx; npm install LiveScript@1.3.1;
 RUN cd /gitbook2edx; npm install babel@4.7.16;
