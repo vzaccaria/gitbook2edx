@@ -1,4 +1,3 @@
-
 shelljs = require('shelljs')
 bluebird = require('bluebird')
 debug = require('debug')(__filename)
@@ -33,7 +32,7 @@ _module = ->
                 debug 'Packing up with `tar cvzf course.tar.gz _course`'
                 shelljs.exec 'tar cvzf course.tar.gz _course', { +async }, (code, output) ->
                     if code
-                        rej('sorry, command failed')
+                       rej("sorry, command 'tar cvzf course.tar.gz _course' failed with #code, output #output")
                     else
                         resolve('ok')
 

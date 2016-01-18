@@ -19,7 +19,7 @@
         }, function(code, output){
           if (code) {
             debug("Error, " + output);
-            return rej('sorry, command failed');
+            return rej("sorry, command " + cmd + " failed with " + code + ", output " + output);
           } else {
             debug("Ok");
             return resolve('ok');

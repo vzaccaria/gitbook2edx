@@ -12,15 +12,15 @@ _module = ->
             cmd = "#{__dirname}/../node_modules/.bin/gitbook build -f json #directory"
             debug cmd
             shelljs.exec cmd, { +async, +silent }, (code, output) ->
-                if code 
+                if code
                     debug("Error, #output")
-                    rej('sorry, command failed')
+                    rej("sorry, command #cmd failed with #code, output #output")
                 else
                     debug("Ok")
                     resolve('ok')
 
     return {
-        gitbook: gitbook 
+        gitbook: gitbook
     }
 
 
